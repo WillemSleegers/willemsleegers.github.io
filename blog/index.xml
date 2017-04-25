@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Willem Sleegers</title>
-    <link>https://willemsleegers.github.io/blog/</link>
+    <link>/blog/</link>
     <description>Recent content in Blogs on Willem Sleegers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>test</title>
-      <link>https://willemsleegers.github.io/blog/test/</link>
+      <link>/blog/test/</link>
       <pubDate>Tue, 25 Apr 2017 23:26:40 +0200</pubDate>
       
-      <guid>https://willemsleegers.github.io/blog/test/</guid>
+      <guid>/blog/test/</guid>
       <description>&lt;!-- BLOGDOWN-HEAD --&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
