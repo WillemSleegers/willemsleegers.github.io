@@ -1,0 +1,70 @@
+/*************************************************
+ *  Core
+ **************************************************/
+
+html {
+  font-size: 90%;
+}
+
+p {
+    font-size: 16px;
+}
+
+/*************************************************
+ *  Navigation Bar
+ **************************************************/
+
+.navbar-default {
+  box-shadow: 0 0rem 0rem 0 rgba(0,0,0,.11)
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/*************************************************
+ *  Biography
+ **************************************************/
+ 
+ #biography {
+     font-size: 30px;
+     font-weight: bold;
+ }
+ 
+ /*************************************************
+ *  Publications
+ **************************************************/
+ 
+#publications span {
+  font-size: 12pt;
+}
+
+ /*************************************************
+ *  Projects
+ **************************************************/
+ 
+.project-toolbar .btn {
+    background-color: transparent;
+    color: #0095eb;
+    transition: all .5s;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0095eb;
+}
+
+.project-toolbar .btn:hover{
+    color: white;
+}
+
+.project-toolbar .btn-toolbar .btn-group .active{
+    background: #0095eb;
+    color: white;
+}

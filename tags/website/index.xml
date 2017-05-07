@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on Willem Sleegers</title>
+    <link>/tags/website/</link>
+    <description>Recent content in Website on Willem Sleegers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Willem Sleegers</copyright>
+    <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/website/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Coming soon</title>
+      <link>/project/coming-soon/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/coming-soon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>New website!</title>
+      <link>/post/2017-05-07-new-website/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-07-new-website/</guid>
+      <description>&lt;p&gt;I have made the switch to the amazing &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34;&gt;blogdown&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

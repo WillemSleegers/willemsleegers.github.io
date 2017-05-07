@@ -2,21 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Willem Sleegers</title>
-    <link>https://willemsleegers.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Willem Sleegers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Willem Sleegers</copyright>
     <atom:link href="/categories/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>R</title>
-      <link>https://willemsleegers.github.io/categories/r/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://willemsleegers.github.io/categories/r/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

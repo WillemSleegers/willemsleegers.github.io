@@ -5,8 +5,8 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/blog/test/</loc>
-      <lastmod>2017-04-25T23:26:40+02:00</lastmod>
+      <loc>/project/coming-soon/</loc>
+      <lastmod>2017-05-07T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -14,7 +14,79 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/tags/academic/</loc>
+      <loc>/post/2017-05-07-new-website/</loc>
+      <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/</loc>
+      <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/</loc>
+      <lastmod>2017-05-06T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/talk/</loc>
+      <lastmod>2017-05-06T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/extremism-reduces-conflict-arousal-and-increases-values-affirmation-in-response-to-meaning-violations/</loc>
+      <lastmod>2017-05-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/talk/pupillometry-and-psychological-processes-cardiff/</loc>
+      <lastmod>2017-03-02T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/the-expectancy-bias/</loc>
+      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/the-social-pain-of-cyberball/</loc>
+      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -23,106 +95,7 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/talk/example-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/post/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/post/2016-12-30-hello-markdown/</loc>
-      <lastmod>2016-12-30T21:49:57-07:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/about/</loc>
-      <lastmod>2016-05-05T21:48:51-07:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/project/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/project/example-external-project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/post/widgets/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/post/managing-content/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-20T10:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/publication/person-re-identification/</loc>
+      <loc>/publication/the-comfort-of-approach/</loc>
       <lastmod>2015-09-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -131,44 +104,8 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/post/2015-07-23-r-rmarkdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/post/2015-01-01-lorem-ipsum/</loc>
-      <lastmod>2015-01-01T13:09:13-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/post/migrate-from-jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/publication/clothing-search/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/publication_types/1/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+      <loc>/publication_types/1/</loc>
+      <lastmod>2017-05-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -177,8 +114,8 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/publication_types/2/</loc>
-      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+      <loc>/publication_types/2/</loc>
+      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -187,8 +124,7 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/blog/</loc>
-      <lastmod>2017-04-25T23:26:40+02:00</lastmod>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -197,7 +133,8 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/categories/</loc>
+      <loc>/project/</loc>
+      <lastmod>2017-05-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -206,8 +143,8 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/tags/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <loc>/publication_types/</loc>
+      <lastmod>2017-05-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -216,97 +153,7 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/tags/demo/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/tags/hugo/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/tags/jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/tags/plot/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/publication_types/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/categories/r/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/tags/r-markdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/tags/regression/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://willemsleegers.github.io/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -316,8 +163,18 @@
     
     <url>
     
-      <loc>https://willemsleegers.github.io/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+      <loc>/tags/website/</loc>
+      <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/</loc>
+      <lastmod>2017-05-06T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
