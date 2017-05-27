@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Website on Willem Sleegers</title>
-    <link>https://willemsleegers.github.io/tags/website/</link>
-    <description>Recent content in Website on Willem Sleegers</description>
+
+    <title>@willemsleegers’s website - Website</title>
+    <link>/tags/website/</link>
+    <description>All entries in Website on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Willem Sleegers</copyright>
-    <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
+    
+    <lastBuildDate>Thu, 25 May 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/website/" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Coming soon</title>
-      <link>https://willemsleegers.github.io/project/coming-soon/</link>
-      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://willemsleegers.github.io/project/coming-soon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>New website!</title>
-      <link>https://willemsleegers.github.io/post/2017-05-07-new-website/</link>
-      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://willemsleegers.github.io/post/2017-05-07-new-website/</guid>
-      <description>&lt;p&gt;I have made the switch to the amazing &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34;&gt;blogdown&lt;/a&gt;!&lt;/p&gt;
+      <item>
+        <title>First post</title>
+        <link>/posts/2017-05-25-first-post/</link>
+        <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>/posts/2017-05-25-first-post/</guid>
+        <description>&lt;p&gt;This is the first post of my new website, created with the amazing &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;. Blogdown uses &lt;a href=&#34;https://cran.r-project.org&#34;&gt;R&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; to create a website with blogging functionality. There are various themes to choose from, and this website uses a customized version of the &lt;a href=&#34;https://github.com/jnjosh/internet-weblog&#34;&gt;internet-weblog theme&lt;/a&gt;. If you&amp;rsquo;re interested in the code for this website, let me know!&lt;/p&gt;
 </description>
-    </item>
+      </item>
+      
     
   </channel>
 </rss>
