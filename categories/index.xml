@@ -3,13 +3,13 @@
   <channel>
 
     <title>@willemsleegers’s website - Categories</title>
-    <link>https://willemsleegers.github.io/categories/</link>
+    <link>/public/categories/</link>
     <description>All entries in Categories on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
     
-    <atom:link href="/categories/" rel="self" type="application/rss+xml" />
+    <atom:link href="/public/categories/" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

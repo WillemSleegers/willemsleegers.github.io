@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://willemsleegers.github.io/posts/2017-05-25-first-post/</loc>
+    <loc>/public/posts/2017-05-25-first-post/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/about/</loc>
+    <loc>/public/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/categories/</loc>
+    <loc>/public/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/posts/</loc>
+    <loc>/public/posts/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/series/</loc>
+    <loc>/public/series/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/tags/</loc>
+    <loc>/public/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/tags/website/</loc>
+    <loc>/public/tags/website/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/</loc>
+    <loc>/public/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
