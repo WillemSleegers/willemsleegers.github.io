@@ -7,19 +7,29 @@
  *  Navigation Bar
  **************************************************/
 
+header {
+    padding: 40px 0 0 0;
+}
+
 header h1 {
     margin: 0 auto;
     padding: 10px;
     text-align: center;
     color: #476286;
+    font-size: 30px;
 }
 
+nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 
 nav ul > li {
-  background-color: white;
-  float: none;
-  font-size: 10pt;
-  font-weight: 400;
+    background-color: white;
+    float: none;
+    font-size: 10pt;
+    font-weight: 400;
 }
 
 article {
@@ -68,6 +78,14 @@ article {
 /*************************************************
  *  Posts
  **************************************************/
+ 
+ .post h2 {
+     font-size: 24px;
+ }
+ 
+ .continue {
+     float: right;
+ }
  
  .post-group-item a {
      font-size: 10.5pt;
@@ -122,9 +140,8 @@ ul.social-icon {
 @media screen and (max-width: 780px) {
 
     .footer_text {
-       padding: 10px;
-       width: auto;
-       
+        padding: 10px;
+        width: auto;
     }
 
     article {
@@ -133,34 +150,28 @@ ul.social-icon {
     }
 
     header {
-        padding: 0;
+        padding: 41px 0 0 0;
     }
 
     header h1 {
-        font-size: 22px;
-        line-height: 30px;
-        text-align: center;
+        font-size: 30px;
     }
 
     nav ul {
         list-style-type: none;
         margin: 0 auto;
+        padding: 0;
     }
 
     nav ul > li {
-        background-color: white;
+
         display: inline;
-        float: none;
-        padding: 10px;
-        text-align: center;
-        
-        font-size: 9pt;
-        font-weight: normal;
+
         border-bottom: white 1px solid;
     }
 
     nav ul:first-child {
-        border-top: none;
+        border-top: white 1px solid;
     }
 
     .post-group-item {
@@ -168,7 +179,7 @@ ul.social-icon {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .footer_text {
         padding: 10px;
         width: auto;
@@ -182,9 +193,9 @@ ul.social-icon {
     header {
         padding: 0;
     }
-
+    
     header h1 {
-        font-size: 22px;
+        font-size: 26px;
         line-height: 30px;
         text-align: center;
     }
