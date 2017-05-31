@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+
+    <title>@willemsleegers’s website - R</title>
+    <link>/tags/r/</link>
+    <description>All entries in R on website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+    <lastBuildDate>Wed, 31 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/r/" rel="self" type="application/rss+xml" />
+    
+      
+      <item>
+        <title>Importing multiple data files</title>
+        <link>/posts/importing-multiple-data-files/</link>
+        <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>/posts/importing-multiple-data-files/</guid>
+        <description>&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;getwd()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;/Users/Willem/Dropbox/Website/willemsleegers.github.io/content/posts&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+</description>
+      </item>
+      
+    
+  </channel>
+</rss>

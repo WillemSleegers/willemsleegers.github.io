@@ -3,21 +3,34 @@
   <channel>
 
     <title>@willemsleegers’s website - Posts</title>
-    <link>https://willemsleegers.github.io/posts/</link>
+    <link>/posts/</link>
     <description>All entries in Posts on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Thu, 25 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 May 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/posts/" rel="self" type="application/rss+xml" />
     
       
       <item>
+        <title>Importing multiple data files</title>
+        <link>/posts/importing-multiple-data-files/</link>
+        <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>/posts/importing-multiple-data-files/</guid>
+        <description>&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;getwd()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;/Users/Willem/Dropbox/Website/willemsleegers.github.io/content/posts&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+</description>
+      </item>
+      
+    
+      
+      <item>
         <title>First post</title>
-        <link>https://willemsleegers.github.io/posts/2017-05-25-first-post/</link>
+        <link>/posts/2017-05-25-first-post/</link>
         <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/2017-05-25-first-post/</guid>
+        <guid>/posts/2017-05-25-first-post/</guid>
         <description>&lt;p&gt;This is the first post of my new website, created with the amazing &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;. Blogdown uses &lt;a href=&#34;https://cran.r-project.org&#34;&gt;R&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; to create a website with blogging functionality. There are various themes to choose from, and this website uses a customized version of the &lt;a href=&#34;https://github.com/jnjosh/internet-weblog&#34;&gt;internet-weblog theme&lt;/a&gt;. If you&amp;rsquo;re interested in the code for this website, let me know!&lt;/p&gt;
 </description>
       </item>

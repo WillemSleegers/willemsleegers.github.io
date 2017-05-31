@@ -1,0 +1,14 @@
+---
+title: Importing multiple data files
+author: ~
+date: '2017-05-31'
+slug: importing-multiple-data-files
+tags:
+  - R
+  - eye tracking
+description: 'In this post I go over several techniques to import and combine multiple data files into a single R data frame.'
+---
+
+``` {r}
+getwd()
+```

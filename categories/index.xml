@@ -3,7 +3,7 @@
   <channel>
 
     <title>@willemsleegers’s website - Categories</title>
-    <link>https://willemsleegers.github.io/categories/</link>
+    <link>/categories/</link>
     <description>All entries in Categories on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
