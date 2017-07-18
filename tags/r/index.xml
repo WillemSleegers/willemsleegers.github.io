@@ -3,21 +3,208 @@
   <channel>
 
     <title>@willemsleegers’s website - R</title>
-    <link>https://willemsleegers.github.io/tags/r/</link>
+    <link>/tags/r/</link>
     <description>All entries in R on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Fri, 02 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jul 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/r/" rel="self" type="application/rss+xml" />
     
       
       <item>
+        <title>Creating a trial-based time variable</title>
+        <link>/posts/creating-a-trial-based-time-variable/</link>
+        <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>/posts/creating-a-trial-based-time-variable/</guid>
+        <description>&lt;p&gt;One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. This, I expected, would be the case for each trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Example data&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;subject&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;timestamp&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;trial&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;pupil&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212275472&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.732900&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212292222&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.742935&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212308845&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.739175&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212325470&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.759690&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212342094&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.753800&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212358844&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.755915&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212375469&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.770130&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212392094&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.760900&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212408718&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.767435&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212425344&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.755015&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The &lt;strong&gt;timestamp&lt;/strong&gt; variable actually reflects the internal clock of the hardware used to get the data. This means that each measurement recording has a specific clock time associated with it, rather than a time stamp related to an event in the experiment.&lt;/p&gt;
+&lt;p&gt;Fortunately, it’s relatively easy to turn this variable into a more useful variable. What we want is a variable, say &lt;strong&gt;time&lt;/strong&gt;, that starts at 0 when a trial begins. The subsequent measures, in the same trial, should then be timed relative to the start of the trial. We want this for every trial.&lt;/p&gt;
+&lt;p&gt;The required steps to get this variable are as follows:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;For each trial, get the minimum of the &lt;strong&gt;timestamp&lt;/strong&gt; variable (e.g., 212275472 in trial 1)&lt;/li&gt;
+&lt;li&gt;Repeat this value across the entire trial&lt;/li&gt;
+&lt;li&gt;Subtract this value from the &lt;strong&gt;timestamp&lt;/strong&gt; variable&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In R, this would look like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Create a trial-based time variable
+data %&amp;gt;%
+    group_by(subject, trial) %&amp;gt;%
+    mutate(time = timestamp - min(timestamp)) -&amp;gt; data
+
+# Divide by a 1000 to have the variable denote milliseconds rather than microseconds
+data$time &amp;lt;- data$time / 1000&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We take our data frame, group the data by &lt;strong&gt;subject&lt;/strong&gt; and &lt;strong&gt;trial&lt;/strong&gt; (because we want the minimum for each individual trial), and create a new variable called &lt;strong&gt;time&lt;/strong&gt; that is equal to the value in &lt;strong&gt;timestamp&lt;/strong&gt; minus the minimum of the timestamp for that trial. Additionally, we divide the result by a 1000 because the internal clock is in microseconds, and I prefer milliseconds. The result is this:&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-2&#34;&gt;Table 2: &lt;/span&gt;Example data with time variable&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;subject&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;timestamp&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;trial&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;pupil&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;time&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212275472&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.732900&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212292222&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.742935&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;16.750&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212308845&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.739175&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;33.373&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212325470&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.759690&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;49.998&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212342094&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.753800&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;66.622&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212358844&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.755915&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212375469&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.770130&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;16.625&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212392094&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.760900&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;33.250&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212408718&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.767435&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;49.874&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;212425344&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.755015&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;66.500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We see that our new variable time indeed starts at 0, adds up until the next trial, where it starts at 0 again. Excellent!&lt;/p&gt;
+</description>
+      </item>
+      
+    
+      
+      <item>
         <title>Importing multiple data files</title>
-        <link>https://willemsleegers.github.io/posts/importing-multiple-data-files/</link>
+        <link>/posts/importing-multiple-data-files/</link>
         <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/importing-multiple-data-files/</guid>
+        <guid>/posts/importing-multiple-data-files/</guid>
         <description>&lt;p&gt;Combining multiple data files is a regular problem for certain researchers, including myself. In my eye tracker research I collect data for each participant separately. This means that when I want to start preparing my data, I first need to combine the data into one large data frame.&lt;/p&gt;
 &lt;p&gt;There are many ways to combine separate data files in R. You can read in each file separately and store the result in their own data frame, after which you merge them together. Depending on the number of files, this might be feasible. In cases where you have many files, this is not. You can also create a &lt;code&gt;for&lt;/code&gt; loop to loop across all the files and merge the data of each file into one data frame. This is an attractive solution, but R is not really made for &lt;code&gt;for&lt;/code&gt; loops. Instead, functions such as &lt;code&gt;lapply()&lt;/code&gt; can be used.&lt;/p&gt;
 &lt;p&gt;But I recently discovered a better &lt;a href=&#34;https://github.com/STAT545-UBC/Discussion/issues/398&#34;&gt;way&lt;/a&gt; that also fits nicely in my preferred usage of R: the &lt;a href=&#34;http://tidyverse.org&#34;&gt;tidyverse&lt;/a&gt;. Using the &lt;code&gt;tidyverse&lt;/code&gt; package, you can read in multiple data files like this:&lt;/p&gt;

@@ -2,63 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://willemsleegers.github.io/posts/importing-multiple-data-files/</loc>
+    <loc>/posts/creating-a-trial-based-time-variable/</loc>
+    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/importing-multiple-data-files/</loc>
     <lastmod>2017-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/posts/2017-05-25-first-post/</loc>
+    <loc>/posts/2017-05-25-first-post/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/tags/eye-tracking/</loc>
-    <lastmod>2017-06-02T00:00:00+00:00</lastmod>
+    <loc>/cv/</loc>
+  </url>
+  
+  <url>
+    <loc>/cv.knit/</loc>
+  </url>
+  
+  <url>
+    <loc>/cv.utf8/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/eye-tracking/</loc>
+    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/posts/</loc>
-    <lastmod>2017-06-02T00:00:00+00:00</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/tags/r/</loc>
-    <lastmod>2017-06-02T00:00:00+00:00</lastmod>
+    <loc>/tags/r/</loc>
+    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/series/</loc>
+    <loc>/series/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/tags/</loc>
-    <lastmod>2017-06-02T00:00:00+00:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/tags/website/</loc>
+    <loc>/tags/website/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://willemsleegers.github.io/</loc>
-    <lastmod>2017-06-02T00:00:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

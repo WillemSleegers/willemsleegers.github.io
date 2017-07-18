@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Willem Sleegers">
+    <meta name="description" content="Personal website of Willem Sleegers">
+    <meta name="generator" content="Hugo 0.20.2" />
+
+    
+    <title>Creating a trial-based time variable &middot; @willemsleegers’s website</title>
+
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/weblog.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="/css/my_css.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
+
+    
+
+
+    
+	<link href="/index.xml" rel="alternate" type="application/rss+xml" title="website" />
+	
+  </head>
+  <body class="site">
+
+<header>
+  <nav>
+    <h1><a href="/">@willemsleegers</a>’s website</h1>
+    <div class="menu">
+      
+      <ul>
+        
+            <li>
+              <a href="/posts/">Posts</a>
+              
+                <a href="/posts/index.xml"><img src="/img/rss.svg" class="rss-icon" /></a>
+              
+            </li>
+        
+            <li>
+              <a href="/publications/">Publications</a>
+              
+            </li>
+        
+            <li>
+              <a href="/talks/">Talks</a>
+              
+            </li>
+        
+            <li>
+              <a href="/cv/">CV</a>
+              
+            </li>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  <main class="content">
+
+    <article class="post">
+      
+        <h2><a rel="full-article" href="/posts/creating-a-trial-based-time-variable/">Creating a trial-based time variable</a></h2>
+      
+
+      <div class="postmeta">Posted on <time datetime="2017-07-19 00:00:00 &#43;0000 UTC" pubdate="">July 19, 2017</time> in
+        <span class="tags">
+          
+            <a class="tag" href="/tags/r">R</a>, 
+          
+            <a class="tag" href="/tags/eye-tracking">eye tracking</a>
+          
+        </span>
+      </div>
+
+      <p>
+        <p>One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. This, I expected, would be the case for each trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:</p>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 1: </span>Example data</caption>
+<thead>
+<tr class="header">
+<th align="right">subject</th>
+<th align="right">timestamp</th>
+<th align="right">trial</th>
+<th align="right">pupil</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212275472</td>
+<td align="right">1</td>
+<td align="right">3.732900</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212292222</td>
+<td align="right">1</td>
+<td align="right">3.742935</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212308845</td>
+<td align="right">1</td>
+<td align="right">3.739175</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212325470</td>
+<td align="right">1</td>
+<td align="right">3.759690</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212342094</td>
+<td align="right">1</td>
+<td align="right">3.753800</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212358844</td>
+<td align="right">2</td>
+<td align="right">3.755915</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212375469</td>
+<td align="right">2</td>
+<td align="right">3.770130</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212392094</td>
+<td align="right">2</td>
+<td align="right">3.760900</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212408718</td>
+<td align="right">2</td>
+<td align="right">3.767435</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212425344</td>
+<td align="right">2</td>
+<td align="right">3.755015</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>timestamp</strong> variable actually reflects the internal clock of the hardware used to get the data. This means that each measurement recording has a specific clock time associated with it, rather than a time stamp related to an event in the experiment.</p>
+<p>Fortunately, it’s relatively easy to turn this variable into a more useful variable. What we want is a variable, say <strong>time</strong>, that starts at 0 when a trial begins. The subsequent measures, in the same trial, should then be timed relative to the start of the trial. We want this for every trial.</p>
+<p>The required steps to get this variable are as follows:</p>
+<ol style="list-style-type: decimal">
+<li>For each trial, get the minimum of the <strong>timestamp</strong> variable (e.g., 212275472 in trial 1)</li>
+<li>Repeat this value across the entire trial</li>
+<li>Subtract this value from the <strong>timestamp</strong> variable</li>
+</ol>
+<p>In R, this would look like this:</p>
+<pre class="r"><code># Create a trial-based time variable
+data %&gt;%
+    group_by(subject, trial) %&gt;%
+    mutate(time = timestamp - min(timestamp)) -&gt; data
+
+# Divide by a 1000 to have the variable denote milliseconds rather than microseconds
+data$time &lt;- data$time / 1000</code></pre>
+<p>We take our data frame, group the data by <strong>subject</strong> and <strong>trial</strong> (because we want the minimum for each individual trial), and create a new variable called <strong>time</strong> that is equal to the value in <strong>timestamp</strong> minus the minimum of the timestamp for that trial. Additionally, we divide the result by a 1000 because the internal clock is in microseconds, and I prefer milliseconds. The result is this:</p>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 2: </span>Example data with time variable</caption>
+<thead>
+<tr class="header">
+<th align="right">subject</th>
+<th align="right">timestamp</th>
+<th align="right">trial</th>
+<th align="right">pupil</th>
+<th align="right">time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212275472</td>
+<td align="right">1</td>
+<td align="right">3.732900</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212292222</td>
+<td align="right">1</td>
+<td align="right">3.742935</td>
+<td align="right">16.750</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212308845</td>
+<td align="right">1</td>
+<td align="right">3.739175</td>
+<td align="right">33.373</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212325470</td>
+<td align="right">1</td>
+<td align="right">3.759690</td>
+<td align="right">49.998</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212342094</td>
+<td align="right">1</td>
+<td align="right">3.753800</td>
+<td align="right">66.622</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212358844</td>
+<td align="right">2</td>
+<td align="right">3.755915</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212375469</td>
+<td align="right">2</td>
+<td align="right">3.770130</td>
+<td align="right">16.625</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212392094</td>
+<td align="right">2</td>
+<td align="right">3.760900</td>
+<td align="right">33.250</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">212408718</td>
+<td align="right">2</td>
+<td align="right">3.767435</td>
+<td align="right">49.874</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">212425344</td>
+<td align="right">2</td>
+<td align="right">3.755015</td>
+<td align="right">66.500</td>
+</tr>
+</tbody>
+</table>
+<p>We see that our new variable time indeed starts at 0, adds up until the next trial, where it starts at 0 again. Excellent!</p>
+
+      </p>
+    </article>
+
+
+  </main>
+
+<footer>
+  <div class="footer_text">
+      <div>
+        <h3>Hi, <a href="">I'm Willem</a></h3>
+        <p>
+          
+
+<div class="bio">I'm an Assistant Professor in the Social Psychology department of Tilburg University. My research is on the topic of false beliefs, pupillometry, and experimental design more generally. On this website I post about my research and share data and code related to my work.</div>
+
+<ul class="social-icon" aria-hidden="true">
+        
+        
+        <li>
+          <a itemprop="sameAs" href="mailto:w.w.a.sleegers@uvt.nl" target="_blank">
+            <i class="fa fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="//twitter.com/willemsleegers" target="_blank">
+            <i class="fa fa-twitter big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://scholar.google.nl/citations?user=EgqxL0MAAAAJ&amp;hl=en" target="_blank">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="//github.com/willemsleegers" target="_blank">
+            <i class="fa fa-github big-icon"></i>
+          </a>
+        </li>
+        
+</ul>
+
+
+        </p>
+      </div>
+      
+  </div>
+
+  
+    <div class="footer_copyright">
+      &copy; 2017 <a href="">Willem Sleegers</a>
+      
+    </div>
+  
+</footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js" charset="utf-8"></script>
+    <script src="/js/weblog.js" charset="utf-8"></script>
+    
+
+    <script type="text/javascript">
+
+  
+  $(function() {
+    
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id=&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>
+
+    
+
+    <link rel="stylesheet" href="//css/highlight styles/xcode.css">
+    <script src="//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

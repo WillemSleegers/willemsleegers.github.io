@@ -3,7 +3,7 @@
   <channel>
 
     <title>@willemsleegers’s website - Series</title>
-    <link>https://willemsleegers.github.io/series/</link>
+    <link>/series/</link>
     <description>All entries in Series on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>

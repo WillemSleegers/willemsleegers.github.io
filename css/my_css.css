@@ -41,8 +41,14 @@ article {
  *  Code
  **************************************************/
 
+pre {
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
 code {
     background-color: #f7f7f7;
+    padding: 10px;
     padding: .2em;
     
     white-space: pre-wrap;       /* css-3 */
@@ -105,7 +111,36 @@ code {
  .post-group-item a {
      font-size: 10.5pt;
  }
+
+ .post ol li {
+  margin: 0;
+ }
+
+ .post ol li {
+  color: #666666;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  text-align: justify;
+ }
+
+ /*************************************************
+ *  Table formatting
+ **************************************************/
  
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
 /*************************************************
  *  Bio
  **************************************************/
