@@ -18,7 +18,7 @@
         <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
         <guid>/posts/creating-a-trial-based-time-variable/</guid>
-        <description>&lt;p&gt;One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. This, I expected, would be the case for each trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:&lt;/p&gt;
+        <description>&lt;p&gt;One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Example data&lt;/caption&gt;
 &lt;thead&gt;

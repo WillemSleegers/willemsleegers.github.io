@@ -20,7 +20,7 @@ library(knitr)
 data <- read_tsv("../../static/data/trial-based-time-variable-data.tsv")
 ```
 
-One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. This, I expected, would be the case for each trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:
+One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:
 
 ```{r echo = FALSE, results = "asis"}
 # Print data
