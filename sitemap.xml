@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/talks/tiber_2017/</loc>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/creating-a-trial-based-time-variable/</loc>
     <lastmod>2017-07-19T00:00:00+00:00</lastmod>
   </url>
@@ -22,6 +27,10 @@
   </url>
   
   <url>
+    <loc>/secret/</loc>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -33,6 +42,12 @@
   <url>
     <loc>/tags/eye-tracking/</loc>
     <lastmod>2017-07-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/otree/</loc>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,6 +75,18 @@
   </url>
   
   <url>
+    <loc>/talks/</loc>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tiber/</loc>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/website/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -67,7 +94,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
