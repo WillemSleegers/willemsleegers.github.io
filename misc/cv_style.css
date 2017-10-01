@@ -1,0 +1,102 @@
+#curriculum-vitae {
+	text-align: center;
+	font-weight: normal;
+	font-size: 1.2em;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+
+#willem-w-a-sleegers {
+	text-align: center;
+
+}
+
+#willem-w-a-sleegers + p {
+	text-align: center;
+}
+
+#willem-w-a-sleegers + p + p {
+	text-align: center;
+}
+
+/* CV headers */
+article h2 {
+	font-size: 1.2em;	
+	border-bottom: solid 2px lightgray;
+    text-transform: uppercase;
+}
+
+article h3 {
+	font-size: 1.1em;
+	margin-bottom: 0;
+}
+
+article ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+article ul li {
+	margin-left: 106px;
+    text-indent: -106px;
+
+    font-family: "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-align: justify;
+	font-size: 18px;
+  	line-height: 28px;
+}
+
+/* Year display  */
+article ul li code {
+	display: inline-block; 
+	width: 100px !important;
+	text-indent: 0;
+	margin: 0;
+	padding: 0;
+	
+	background-color: white !important;
+
+	font-family: "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+article ol {
+	list-style-type: disc !important;
+	margin: 0;
+	padding: 0;
+	margin-left: 1em;
+
+}
+
+article ol li {
+	margin: 0;
+	padding: 0;
+
+	color: #666666;
+	text-align: justify;
+	font-size: 18px;
+  	line-height: 28px;
+}
+
+article ol li p {
+	color: #666666;
+	text-align: justify;
+	font-size: 18px;
+  	line-height: 28px;
+}
+
+
+
+/* Publications section */
+
+article #publications p { 
+    text-indent: -2em;
+	margin-left: 2em;
+}
+
+article #presentations p { 
+    text-indent: -2em;
+	margin-left: 2em;
+}
