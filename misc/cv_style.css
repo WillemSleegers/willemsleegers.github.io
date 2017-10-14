@@ -1,4 +1,9 @@
+.page p {
+    color: black;
+}
+
 #curriculum-vitae {
+    color: black;
 	text-align: center;
 	font-weight: normal;
 	font-size: 1.2em;
@@ -42,7 +47,7 @@ article ul li {
     text-indent: -106px;
 
     font-family: "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
-	color: #666666;
+	
 	text-align: justify;
 	font-size: 18px;
   	line-height: 28px;
@@ -59,7 +64,7 @@ article ul li code {
 	background-color: white !important;
 
 	font-family: "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
-	color: #666666;
+	
 }
 
 article ol {
@@ -74,14 +79,14 @@ article ol li {
 	margin: 0;
 	padding: 0;
 
-	color: #666666;
+	
 	text-align: justify;
 	font-size: 18px;
   	line-height: 28px;
 }
 
 article ol li p {
-	color: #666666;
+	
 	text-align: justify;
 	font-size: 18px;
   	line-height: 28px;

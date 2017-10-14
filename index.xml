@@ -3,7 +3,7 @@
   <channel>
 
     <title>@willemsleegers’s website - website</title>
-    <link>/</link>
+    <link>https://willemsleegers.github.io/</link>
     <description>All entries in website on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,10 +14,10 @@
       
       <item>
         <title>TIBER 2017: oTree for social scientists</title>
-        <link>/talks/tiber_2017/</link>
+        <link>https://willemsleegers.github.io/talks/tiber_2017/</link>
         <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/talks/tiber_2017/</guid>
+        <guid>https://willemsleegers.github.io/talks/tiber_2017/</guid>
         <description>&lt;div id=&#34;tiber-2017-talk&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TIBER 2017 talk&lt;/h1&gt;
 &lt;p&gt;At TIBER 2017 I gave a talk about &lt;a href=&#34;https://www.otree.com&#34;&gt;oTree&lt;/a&gt;, an open-source platform for conducting web, field, and lab experiments. Below you can find a link to this talk, as well as something resembling a transcript of the talk (I like writing out what I’m going to say for a talk).&lt;/p&gt;
@@ -87,10 +87,10 @@
       
       <item>
         <title>Creating a trial-based time variable</title>
-        <link>/posts/creating-a-trial-based-time-variable/</link>
+        <link>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</link>
         <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/posts/creating-a-trial-based-time-variable/</guid>
+        <guid>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</guid>
         <description>&lt;p&gt;One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Example data&lt;/caption&gt;
@@ -274,10 +274,10 @@ data$time &amp;lt;- data$time / 1000&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>Importing multiple data files</title>
-        <link>/posts/importing-multiple-data-files/</link>
+        <link>https://willemsleegers.github.io/posts/importing-multiple-data-files/</link>
         <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/posts/importing-multiple-data-files/</guid>
+        <guid>https://willemsleegers.github.io/posts/importing-multiple-data-files/</guid>
         <description>&lt;p&gt;Combining multiple data files is a regular problem for certain researchers, including myself. In my eye tracker research I collect data for each participant separately. This means that when I want to start preparing my data, I first need to combine the data into one large data frame.&lt;/p&gt;
 &lt;p&gt;There are many ways to combine separate data files in R. You can read in each file separately and store the result in their own data frame, after which you merge them together. Depending on the number of files, this might be feasible. In cases where you have many files, this is not. You can also create a &lt;code&gt;for&lt;/code&gt; loop to loop across all the files and merge the data of each file into one data frame. This is an attractive solution, but R is not really made for &lt;code&gt;for&lt;/code&gt; loops. Instead, functions such as &lt;code&gt;lapply()&lt;/code&gt; can be used.&lt;/p&gt;
 &lt;p&gt;But I recently discovered a better &lt;a href=&#34;https://github.com/STAT545-UBC/Discussion/issues/398&#34;&gt;way&lt;/a&gt; that also fits nicely in my preferred usage of R: the &lt;a href=&#34;http://tidyverse.org&#34;&gt;tidyverse&lt;/a&gt;. Using the &lt;code&gt;tidyverse&lt;/code&gt; package, you can read in multiple data files like this:&lt;/p&gt;
@@ -294,10 +294,10 @@ list.files() %&amp;gt;%
       
       <item>
         <title>First post</title>
-        <link>/posts/2017-05-25-first-post/</link>
+        <link>https://willemsleegers.github.io/posts/2017-05-25-first-post/</link>
         <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/posts/2017-05-25-first-post/</guid>
+        <guid>https://willemsleegers.github.io/posts/2017-05-25-first-post/</guid>
         <description>&lt;p&gt;This is the first post of my new website, created with the amazing &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;. Blogdown uses &lt;a href=&#34;https://cran.r-project.org&#34;&gt;R&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; to create a website with blogging functionality. There are various themes to choose from, and this website uses a customized version of the &lt;a href=&#34;https://github.com/jnjosh/internet-weblog&#34;&gt;internet-weblog theme&lt;/a&gt;. If you&amp;rsquo;re interested in the code for this website, let me know!&lt;/p&gt;
 </description>
       </item>
