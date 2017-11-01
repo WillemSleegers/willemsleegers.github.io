@@ -2,6 +2,10 @@
  *  Core
  **************************************************/
 
+.section {
+    font-size: 18px;
+    line-height: 24px;
+}
 
 /*************************************************
  *  Navigation Bar
@@ -42,20 +46,22 @@ article {
  **************************************************/
 
 pre {
+    
   background-color: #f7f7f7;
   padding: 10px;
+  
+  
+  overflow-x: scroll;
 }
 
 code {
+    font-size: 85%;
+    width: 760px;
+    
     background-color: #f7f7f7;
     padding: 10px;
     padding: .2em;
     
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 /*************************************************
@@ -101,7 +107,12 @@ code {
  **************************************************/
  
 .post p {
+    /* color: #666666; */
     color: black;
+    font-size: 18px;
+    line-height: 28px;
+    
+    text-align: justify;
 }
  
  .post h2 {
