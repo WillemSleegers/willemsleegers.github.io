@@ -31,7 +31,7 @@
 &lt;li&gt;Table of contents&lt;/li&gt;
 &lt;li&gt;Two page structure with footers and headers (see example)&lt;/li&gt;
 &lt;li&gt;Figures&lt;/li&gt;
-&lt;li&gt;Bibliography support with in-text references that link to the reference in the References section&lt;/li&gt;
+&lt;li&gt;Bibliography support with in-text references that link to the reference in the References section AND with page numbers in the References section to link back to the page where the reference was found&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;You can download the LaTeX template &lt;a href=&#34;https://willemsleegers.github.io/../../misc/dissertation_template.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
