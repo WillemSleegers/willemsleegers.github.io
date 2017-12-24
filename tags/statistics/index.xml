@@ -3,7 +3,7 @@
   <channel>
 
     <title>@willemsleegers’s website - Statistics</title>
-    <link>/tags/statistics/</link>
+    <link>https://willemsleegers.github.io/tags/statistics/</link>
     <description>All entries in Statistics on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,10 +14,10 @@
       
       <item>
         <title>Introducing tidystats</title>
-        <link>/posts/introducing-tidystats/</link>
+        <link>https://willemsleegers.github.io/posts/introducing-tidystats/</link>
         <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/posts/introducing-tidystats/</guid>
+        <guid>https://willemsleegers.github.io/posts/introducing-tidystats/</guid>
         <description>&lt;p&gt;I am very excited to announce my first ever R package, called &lt;code&gt;tidystats&lt;/code&gt;. Its function is to create a single text file containing the output of statistical models. This will enable researchers to store the results of their analyses not just in their manuscripts, but also in an organized file separate from their manuscript that they can freely share with anyone. In this blog post I will go into why I think it is useful to do this and how &lt;code&gt;tidystats&lt;/code&gt; works conceptually. For a tutorial I refer to the &lt;a href=&#34;https://github.com/WillemSleegers/tidystats&#34;&gt;README&lt;/a&gt; on Github and a future blog post.&lt;/p&gt;
 &lt;div id=&#34;pdf-prisons&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;PDF prisons&lt;/h3&gt;

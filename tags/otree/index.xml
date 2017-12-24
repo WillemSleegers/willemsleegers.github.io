@@ -3,7 +3,7 @@
   <channel>
 
     <title>@willemsleegers’s website - Otree</title>
-    <link>/tags/otree/</link>
+    <link>https://willemsleegers.github.io/tags/otree/</link>
     <description>All entries in Otree on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,10 +14,10 @@
       
       <item>
         <title>TIBER 2017: oTree for social scientists</title>
-        <link>/talks/tiber_2017/</link>
+        <link>https://willemsleegers.github.io/talks/tiber_2017/</link>
         <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/talks/tiber_2017/</guid>
+        <guid>https://willemsleegers.github.io/talks/tiber_2017/</guid>
         <description>&lt;div id=&#34;tiber-2017-talk&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TIBER 2017 talk&lt;/h1&gt;
 &lt;p&gt;At TIBER 2017 I gave a talk about &lt;a href=&#34;https://www.otree.com&#34;&gt;oTree&lt;/a&gt;, an open-source platform for conducting web, field, and lab experiments. Below you can find a link to this talk, as well as something resembling a transcript of the talk (I like writing out what I’m going to say for a talk).&lt;/p&gt;
