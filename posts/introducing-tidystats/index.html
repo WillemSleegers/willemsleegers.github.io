@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Willem Sleegers">
     <meta name="description" content="Personal website of Willem Sleegers">
-    <meta name="generator" content="Hugo 0.20" />
+    <meta name="generator" content="Hugo 0.20.2" />
 
     
     <title>Introducing tidystats &middot; @willemsleegers’s website</title>
 
-    <link rel="stylesheet" href="https://willemsleegers.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://willemsleegers.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://willemsleegers.github.io/css/academicons.min.css">
-    <link rel="stylesheet" href="https://willemsleegers.github.io/css/weblog.css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="https://willemsleegers.github.io/css/my_css.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/academicons.min.css">
+    <link rel="stylesheet" href="/css/weblog.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="/css/my_css.css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
 
     
 
 
     
-	<link href="https://willemsleegers.github.io/index.xml" rel="alternate" type="application/rss+xml" title="website" />
+	<link href="/index.xml" rel="alternate" type="application/rss+xml" title="website" />
 	
   </head>
   <body class="site">
@@ -67,7 +67,7 @@
 
     <article class="post">
       
-        <h2><a rel="full-article" href="https://willemsleegers.github.io/posts/introducing-tidystats/">Introducing tidystats</a></h2>
+        <h2><a rel="full-article" href="/posts/introducing-tidystats/">Introducing tidystats</a></h2>
       
 
       <div class="postmeta">Posted on <time datetime="2017-10-14 00:00:00 &#43;0000 UTC" pubdate="">October 14, 2017</time> in
@@ -125,25 +125,24 @@ summary(model)</code></pre>
 <p>Applying this to the <code>model</code> variable, we get:</p>
 <pre class="r"><code>tidystats::tidy_stats(model)</code></pre>
 <pre><code>## # A tibble: 16 x 5
-##    term_nr               term          statistic         value
-##      &lt;dbl&gt;              &lt;chr&gt;              &lt;chr&gt;         &lt;dbl&gt;
-##  1       1        (Intercept)                  b  5.032000e+00
-##  2       1        (Intercept)                 SE  2.202177e-01
-##  3       1        (Intercept)                  t  2.285012e+01
-##  4       1        (Intercept)                  p  9.547128e-15
-##  5       1        (Intercept)                 df  1.800000e+01
-##  6       2 conditiontreatment                  b -3.710000e-01
-##  7       2 conditiontreatment                 SE  3.114349e-01
-##  8       2 conditiontreatment                  t -1.191260e+00
-##  9       2 conditiontreatment                  p  2.490232e-01
-## 10       2 conditiontreatment                 df  1.800000e+01
-## 11       3            (Model)          R squared  7.307760e-02
-## 12       3            (Model) adjusted R squared  2.158191e-02
-## 13       3            (Model)                  F  1.419101e+00
-## 14       3            (Model)       numerator df  1.000000e+00
-## 15       3            (Model)     denominator df  1.800000e+01
-## 16       3            (Model)                  p  2.490232e-01
-## # ... with 1 more variables: method &lt;chr&gt;</code></pre>
+##    term_nr term               statistic                   value method    
+##      &lt;dbl&gt; &lt;chr&gt;              &lt;chr&gt;                       &lt;dbl&gt; &lt;chr&gt;     
+##  1    1.00 (Intercept)        b                        5.03e⁺ ⁰ Linear re…
+##  2    1.00 (Intercept)        SE                       2.20e⁻ ¹ Linear re…
+##  3    1.00 (Intercept)        t                        2.29e⁺ ¹ Linear re…
+##  4    1.00 (Intercept)        p                        9.55e⁻¹⁵ Linear re…
+##  5    1.00 (Intercept)        df                       1.80e⁺ ¹ Linear re…
+##  6    2.00 conditiontreatment b                       -3.71e⁻ ¹ Linear re…
+##  7    2.00 conditiontreatment SE                       3.11e⁻ ¹ Linear re…
+##  8    2.00 conditiontreatment t                       -1.19e⁺ ⁰ Linear re…
+##  9    2.00 conditiontreatment p                        2.49e⁻ ¹ Linear re…
+## 10    2.00 conditiontreatment df                       1.80e⁺ ¹ Linear re…
+## 11    3.00 (Model)            R squared                7.31e⁻ ² Linear re…
+## 12    3.00 (Model)            adjusted R squared       2.16e⁻ ² Linear re…
+## 13    3.00 (Model)            F                        1.42e⁺ ⁰ Linear re…
+## 14    3.00 (Model)            numerator df             1.00e⁺ ⁰ Linear re…
+## 15    3.00 (Model)            denominator df           1.80e⁺ ¹ Linear re…
+## 16    3.00 (Model)            p                        2.49e⁻ ¹ Linear re…</code></pre>
 <p>Here we see that the output is now organized in such a way that each column is a relevant variable, each row is a statistic, and the entire output is a table containing important statistics of the regression analysis. This allows us to then combine the output of <em>multiple</em> statistical tests.</p>
 <p>However, before adding multiple results together, it might be useful to add additional information.</p>
 </div>
@@ -245,8 +244,8 @@ summary(model)</code></pre>
 
     
 
-    <link rel="stylesheet" href="https://willemsleegers.github.io/css/highlight styles/xcode.css">
-    <script src="https://willemsleegers.github.io/js/highlight.pack.js"></script>
+    <link rel="stylesheet" href="/css/highlight styles/xcode.css">
+    <script src="/js/highlight.pack.js"></script>
     <script>
         $(document).ready(function() {
             $('.r').each(function(i, block) {

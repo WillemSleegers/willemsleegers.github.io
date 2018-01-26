@@ -3,21 +3,39 @@
   <channel>
 
     <title>@willemsleegers’s website - R</title>
-    <link>https://willemsleegers.github.io/tags/r/</link>
+    <link>/tags/r/</link>
     <description>All entries in R on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Sat, 14 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/r/" rel="self" type="application/rss+xml" />
     
       
       <item>
+        <title>tidystats</title>
+        <link>/talks/labmeeting_26_01_2018/</link>
+        <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>/talks/labmeeting_26_01_2018/</guid>
+        <description>&lt;div id=&#34;lab-meeting-talk-tidystats&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Lab meeting talk: tidystats&lt;/h1&gt;
+&lt;p&gt;On January 26th, 2018, I gave a lab meeting presentation on my R package called tidystats. You can see the slides here:&lt;/p&gt;
+&lt;div id=&#34;view-slides&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;labmeeting_26_01_2018.html&#34;&gt;View slides&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      </item>
+      
+    
+      
+      <item>
         <title>Introducing tidystats</title>
-        <link>https://willemsleegers.github.io/posts/introducing-tidystats/</link>
+        <link>/posts/introducing-tidystats/</link>
         <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/introducing-tidystats/</guid>
+        <guid>/posts/introducing-tidystats/</guid>
         <description>&lt;p&gt;I am very excited to announce my first ever R package, called &lt;code&gt;tidystats&lt;/code&gt;. Its function is to create a single text file containing the output of statistical models. This will enable researchers to store the results of their analyses not just in their manuscripts, but also in an organized file separate from their manuscript that they can freely share with anyone. In this blog post I will go into why I think it is useful to do this and how &lt;code&gt;tidystats&lt;/code&gt; works conceptually. For a tutorial I refer to the &lt;a href=&#34;https://github.com/WillemSleegers/tidystats&#34;&gt;README&lt;/a&gt; on Github and a future blog post.&lt;/p&gt;
 &lt;div id=&#34;pdf-prisons&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;PDF prisons&lt;/h3&gt;
@@ -60,25 +78,24 @@ summary(model)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Applying this to the &lt;code&gt;model&lt;/code&gt; variable, we get:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidystats::tidy_stats(model)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 16 x 5
-##    term_nr               term          statistic         value
-##      &amp;lt;dbl&amp;gt;              &amp;lt;chr&amp;gt;              &amp;lt;chr&amp;gt;         &amp;lt;dbl&amp;gt;
-##  1       1        (Intercept)                  b  5.032000e+00
-##  2       1        (Intercept)                 SE  2.202177e-01
-##  3       1        (Intercept)                  t  2.285012e+01
-##  4       1        (Intercept)                  p  9.547128e-15
-##  5       1        (Intercept)                 df  1.800000e+01
-##  6       2 conditiontreatment                  b -3.710000e-01
-##  7       2 conditiontreatment                 SE  3.114349e-01
-##  8       2 conditiontreatment                  t -1.191260e+00
-##  9       2 conditiontreatment                  p  2.490232e-01
-## 10       2 conditiontreatment                 df  1.800000e+01
-## 11       3            (Model)          R squared  7.307760e-02
-## 12       3            (Model) adjusted R squared  2.158191e-02
-## 13       3            (Model)                  F  1.419101e+00
-## 14       3            (Model)       numerator df  1.000000e+00
-## 15       3            (Model)     denominator df  1.800000e+01
-## 16       3            (Model)                  p  2.490232e-01
-## # ... with 1 more variables: method &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    term_nr term               statistic                   value method    
+##      &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;              &amp;lt;chr&amp;gt;                       &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;     
+##  1    1.00 (Intercept)        b                        5.03e⁺ ⁰ Linear re…
+##  2    1.00 (Intercept)        SE                       2.20e⁻ ¹ Linear re…
+##  3    1.00 (Intercept)        t                        2.29e⁺ ¹ Linear re…
+##  4    1.00 (Intercept)        p                        9.55e⁻¹⁵ Linear re…
+##  5    1.00 (Intercept)        df                       1.80e⁺ ¹ Linear re…
+##  6    2.00 conditiontreatment b                       -3.71e⁻ ¹ Linear re…
+##  7    2.00 conditiontreatment SE                       3.11e⁻ ¹ Linear re…
+##  8    2.00 conditiontreatment t                       -1.19e⁺ ⁰ Linear re…
+##  9    2.00 conditiontreatment p                        2.49e⁻ ¹ Linear re…
+## 10    2.00 conditiontreatment df                       1.80e⁺ ¹ Linear re…
+## 11    3.00 (Model)            R squared                7.31e⁻ ² Linear re…
+## 12    3.00 (Model)            adjusted R squared       2.16e⁻ ² Linear re…
+## 13    3.00 (Model)            F                        1.42e⁺ ⁰ Linear re…
+## 14    3.00 (Model)            numerator df             1.00e⁺ ⁰ Linear re…
+## 15    3.00 (Model)            denominator df           1.80e⁺ ¹ Linear re…
+## 16    3.00 (Model)            p                        2.49e⁻ ¹ Linear re…&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here we see that the output is now organized in such a way that each column is a relevant variable, each row is a statistic, and the entire output is a table containing important statistics of the regression analysis. This allows us to then combine the output of &lt;em&gt;multiple&lt;/em&gt; statistical tests.&lt;/p&gt;
 &lt;p&gt;However, before adding multiple results together, it might be useful to add additional information.&lt;/p&gt;
 &lt;/div&gt;
@@ -106,10 +123,10 @@ summary(model)&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>Creating a trial-based time variable</title>
-        <link>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</link>
+        <link>/posts/creating-a-trial-based-time-variable/</link>
         <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</guid>
+        <guid>/posts/creating-a-trial-based-time-variable/</guid>
         <description>&lt;p&gt;One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Example data&lt;/caption&gt;
@@ -293,10 +310,10 @@ data$time &amp;lt;- data$time / 1000&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>Importing multiple data files</title>
-        <link>https://willemsleegers.github.io/posts/importing-multiple-data-files/</link>
+        <link>/posts/importing-multiple-data-files/</link>
         <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/importing-multiple-data-files/</guid>
+        <guid>/posts/importing-multiple-data-files/</guid>
         <description>&lt;p&gt;Combining multiple data files is a regular problem for certain researchers, including myself. In my eye tracker research I collect data for each participant separately. This means that when I want to start preparing my data, I first need to combine the data into one large data frame.&lt;/p&gt;
 &lt;p&gt;There are many ways to combine separate data files in R. You can read in each file separately and store the result in their own data frame, after which you merge them together. Depending on the number of files, this might be feasible. In cases where you have many files, this is not. You can also create a &lt;code&gt;for&lt;/code&gt; loop to loop across all the files and merge the data of each file into one data frame. This is an attractive solution, but R is not really made for &lt;code&gt;for&lt;/code&gt; loops. Instead, functions such as &lt;code&gt;lapply()&lt;/code&gt; can be used.&lt;/p&gt;
 &lt;p&gt;But I recently discovered a better &lt;a href=&#34;https://github.com/STAT545-UBC/Discussion/issues/398&#34;&gt;way&lt;/a&gt; that also fits nicely in my preferred usage of R: the &lt;a href=&#34;http://tidyverse.org&#34;&gt;tidyverse&lt;/a&gt;. Using the &lt;code&gt;tidyverse&lt;/code&gt; package, you can read in multiple data files like this:&lt;/p&gt;

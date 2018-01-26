@@ -3,21 +3,39 @@
   <channel>
 
     <title>@willemsleegers’s website - Talks</title>
-    <link>https://willemsleegers.github.io/talks/</link>
+    <link>/talks/</link>
     <description>All entries in Talks on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Fri, 25 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/talks/" rel="self" type="application/rss+xml" />
     
       
       <item>
+        <title>tidystats</title>
+        <link>/talks/labmeeting_26_01_2018/</link>
+        <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>/talks/labmeeting_26_01_2018/</guid>
+        <description>&lt;div id=&#34;lab-meeting-talk-tidystats&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Lab meeting talk: tidystats&lt;/h1&gt;
+&lt;p&gt;On January 26th, 2018, I gave a lab meeting presentation on my R package called tidystats. You can see the slides here:&lt;/p&gt;
+&lt;div id=&#34;view-slides&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;labmeeting_26_01_2018.html&#34;&gt;View slides&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      </item>
+      
+    
+      
+      <item>
         <title>TIBER 2017: oTree for social scientists</title>
-        <link>https://willemsleegers.github.io/talks/tiber_2017/</link>
+        <link>/talks/tiber_2017/</link>
         <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/talks/tiber_2017/</guid>
+        <guid>/talks/tiber_2017/</guid>
         <description>&lt;div id=&#34;tiber-2017-talk&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TIBER 2017 talk&lt;/h1&gt;
 &lt;p&gt;At TIBER 2017 I gave a talk about &lt;a href=&#34;https://www.otree.com&#34;&gt;oTree&lt;/a&gt;, an open-source platform for conducting web, field, and lab experiments. Below you can find a link to this talk, as well as something resembling a transcript of the talk (I like writing out what I’m going to say for a talk).&lt;/p&gt;

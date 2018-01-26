@@ -3,26 +3,44 @@
   <channel>
 
     <title>@willemsleegers’s website - website</title>
-    <link>https://willemsleegers.github.io/</link>
+    <link>/</link>
     <description>All entries in website on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Sat, 23 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
       
       <item>
+        <title>tidystats</title>
+        <link>/talks/labmeeting_26_01_2018/</link>
+        <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>/talks/labmeeting_26_01_2018/</guid>
+        <description>&lt;div id=&#34;lab-meeting-talk-tidystats&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Lab meeting talk: tidystats&lt;/h1&gt;
+&lt;p&gt;On January 26th, 2018, I gave a lab meeting presentation on my R package called tidystats. You can see the slides here:&lt;/p&gt;
+&lt;div id=&#34;view-slides&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;labmeeting_26_01_2018.html&#34;&gt;View slides&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      </item>
+      
+    
+      
+      <item>
         <title>My LaTeX dissertation template</title>
-        <link>https://willemsleegers.github.io/posts/my-latex-dissertation-template/</link>
+        <link>/posts/my-latex-dissertation-template/</link>
         <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/my-latex-dissertation-template/</guid>
+        <guid>/posts/my-latex-dissertation-template/</guid>
         <description>&lt;p&gt;I wrote my PhD dissertation in LaTeX, assuming it would be easier to use (in the long run!) compared to a standard text editor like Pages or Word. Pages does not support all of the functions needed for a beautiful dissertation (step up your game, Apple) and I dislike working in Word. Preferably, I would have written my dissertation in Markdown, but that also seems too limited for a dissertation. Hence, LaTeX.&lt;/p&gt;
 
 &lt;p&gt;In the end, I&amp;rsquo;m not sure whether it was worth it. I had to figure out a lot of things, which took me many hours, and the end result was just a whole mixup of packages of which I barely understood what they do. I did not have any experience working in LaTeX so I also took this as an opportunity to figure out whether I like it. My conclusion: I do not. There does not seem to be any kind of vision behind the structure underlying LaTeX, as seen in the need for a package for almost every single feature you would like to see in a text document. Unfortunately, it&amp;rsquo;s probably the only workable tool at the moment for a complex document like a dissertation.&lt;/p&gt;
 
-&lt;p&gt;Perhaps, then, having a suitable template might do the trick, so I present you with mine. You can find a PDF example of the template &lt;a href=&#34;https://willemsleegers.github.io/../../misc/dissertation_template.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Perhaps, then, having a suitable template might do the trick, so I present you with mine. You can find a PDF example of the template &lt;a href=&#34;/../../misc/dissertation_template.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;It has the following features:&lt;/p&gt;
 
@@ -34,7 +52,7 @@
 &lt;li&gt;Bibliography support with in-text references that link to the reference in the References section AND with page numbers in the References section to link back to the page where the reference was found&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;You can download the LaTeX template &lt;a href=&#34;https://willemsleegers.github.io/../../misc/dissertation_template.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can download the LaTeX template &lt;a href=&#34;/../../misc/dissertation_template.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
       </item>
       
@@ -42,10 +60,10 @@
       
       <item>
         <title>Introducing tidystats</title>
-        <link>https://willemsleegers.github.io/posts/introducing-tidystats/</link>
+        <link>/posts/introducing-tidystats/</link>
         <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/introducing-tidystats/</guid>
+        <guid>/posts/introducing-tidystats/</guid>
         <description>&lt;p&gt;I am very excited to announce my first ever R package, called &lt;code&gt;tidystats&lt;/code&gt;. Its function is to create a single text file containing the output of statistical models. This will enable researchers to store the results of their analyses not just in their manuscripts, but also in an organized file separate from their manuscript that they can freely share with anyone. In this blog post I will go into why I think it is useful to do this and how &lt;code&gt;tidystats&lt;/code&gt; works conceptually. For a tutorial I refer to the &lt;a href=&#34;https://github.com/WillemSleegers/tidystats&#34;&gt;README&lt;/a&gt; on Github and a future blog post.&lt;/p&gt;
 &lt;div id=&#34;pdf-prisons&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;PDF prisons&lt;/h3&gt;
@@ -88,25 +106,24 @@ summary(model)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Applying this to the &lt;code&gt;model&lt;/code&gt; variable, we get:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidystats::tidy_stats(model)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 16 x 5
-##    term_nr               term          statistic         value
-##      &amp;lt;dbl&amp;gt;              &amp;lt;chr&amp;gt;              &amp;lt;chr&amp;gt;         &amp;lt;dbl&amp;gt;
-##  1       1        (Intercept)                  b  5.032000e+00
-##  2       1        (Intercept)                 SE  2.202177e-01
-##  3       1        (Intercept)                  t  2.285012e+01
-##  4       1        (Intercept)                  p  9.547128e-15
-##  5       1        (Intercept)                 df  1.800000e+01
-##  6       2 conditiontreatment                  b -3.710000e-01
-##  7       2 conditiontreatment                 SE  3.114349e-01
-##  8       2 conditiontreatment                  t -1.191260e+00
-##  9       2 conditiontreatment                  p  2.490232e-01
-## 10       2 conditiontreatment                 df  1.800000e+01
-## 11       3            (Model)          R squared  7.307760e-02
-## 12       3            (Model) adjusted R squared  2.158191e-02
-## 13       3            (Model)                  F  1.419101e+00
-## 14       3            (Model)       numerator df  1.000000e+00
-## 15       3            (Model)     denominator df  1.800000e+01
-## 16       3            (Model)                  p  2.490232e-01
-## # ... with 1 more variables: method &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##    term_nr term               statistic                   value method    
+##      &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;              &amp;lt;chr&amp;gt;                       &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;     
+##  1    1.00 (Intercept)        b                        5.03e⁺ ⁰ Linear re…
+##  2    1.00 (Intercept)        SE                       2.20e⁻ ¹ Linear re…
+##  3    1.00 (Intercept)        t                        2.29e⁺ ¹ Linear re…
+##  4    1.00 (Intercept)        p                        9.55e⁻¹⁵ Linear re…
+##  5    1.00 (Intercept)        df                       1.80e⁺ ¹ Linear re…
+##  6    2.00 conditiontreatment b                       -3.71e⁻ ¹ Linear re…
+##  7    2.00 conditiontreatment SE                       3.11e⁻ ¹ Linear re…
+##  8    2.00 conditiontreatment t                       -1.19e⁺ ⁰ Linear re…
+##  9    2.00 conditiontreatment p                        2.49e⁻ ¹ Linear re…
+## 10    2.00 conditiontreatment df                       1.80e⁺ ¹ Linear re…
+## 11    3.00 (Model)            R squared                7.31e⁻ ² Linear re…
+## 12    3.00 (Model)            adjusted R squared       2.16e⁻ ² Linear re…
+## 13    3.00 (Model)            F                        1.42e⁺ ⁰ Linear re…
+## 14    3.00 (Model)            numerator df             1.00e⁺ ⁰ Linear re…
+## 15    3.00 (Model)            denominator df           1.80e⁺ ¹ Linear re…
+## 16    3.00 (Model)            p                        2.49e⁻ ¹ Linear re…&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here we see that the output is now organized in such a way that each column is a relevant variable, each row is a statistic, and the entire output is a table containing important statistics of the regression analysis. This allows us to then combine the output of &lt;em&gt;multiple&lt;/em&gt; statistical tests.&lt;/p&gt;
 &lt;p&gt;However, before adding multiple results together, it might be useful to add additional information.&lt;/p&gt;
 &lt;/div&gt;
@@ -134,10 +151,10 @@ summary(model)&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>TIBER 2017: oTree for social scientists</title>
-        <link>https://willemsleegers.github.io/talks/tiber_2017/</link>
+        <link>/talks/tiber_2017/</link>
         <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/talks/tiber_2017/</guid>
+        <guid>/talks/tiber_2017/</guid>
         <description>&lt;div id=&#34;tiber-2017-talk&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TIBER 2017 talk&lt;/h1&gt;
 &lt;p&gt;At TIBER 2017 I gave a talk about &lt;a href=&#34;https://www.otree.com&#34;&gt;oTree&lt;/a&gt;, an open-source platform for conducting web, field, and lab experiments. Below you can find a link to this talk, as well as something resembling a transcript of the talk (I like writing out what I’m going to say for a talk).&lt;/p&gt;
@@ -207,10 +224,10 @@ summary(model)&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>Creating a trial-based time variable</title>
-        <link>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</link>
+        <link>/posts/creating-a-trial-based-time-variable/</link>
         <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</guid>
+        <guid>/posts/creating-a-trial-based-time-variable/</guid>
         <description>&lt;p&gt;One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Example data&lt;/caption&gt;
@@ -394,10 +411,10 @@ data$time &amp;lt;- data$time / 1000&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>Importing multiple data files</title>
-        <link>https://willemsleegers.github.io/posts/importing-multiple-data-files/</link>
+        <link>/posts/importing-multiple-data-files/</link>
         <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/importing-multiple-data-files/</guid>
+        <guid>/posts/importing-multiple-data-files/</guid>
         <description>&lt;p&gt;Combining multiple data files is a regular problem for certain researchers, including myself. In my eye tracker research I collect data for each participant separately. This means that when I want to start preparing my data, I first need to combine the data into one large data frame.&lt;/p&gt;
 &lt;p&gt;There are many ways to combine separate data files in R. You can read in each file separately and store the result in their own data frame, after which you merge them together. Depending on the number of files, this might be feasible. In cases where you have many files, this is not. You can also create a &lt;code&gt;for&lt;/code&gt; loop to loop across all the files and merge the data of each file into one data frame. This is an attractive solution, but R is not really made for &lt;code&gt;for&lt;/code&gt; loops. Instead, functions such as &lt;code&gt;lapply()&lt;/code&gt; can be used.&lt;/p&gt;
 &lt;p&gt;But I recently discovered a better &lt;a href=&#34;https://github.com/STAT545-UBC/Discussion/issues/398&#34;&gt;way&lt;/a&gt; that also fits nicely in my preferred usage of R: the &lt;a href=&#34;http://tidyverse.org&#34;&gt;tidyverse&lt;/a&gt;. Using the &lt;code&gt;tidyverse&lt;/code&gt; package, you can read in multiple data files like this:&lt;/p&gt;
@@ -414,10 +431,10 @@ list.files() %&amp;gt;%
       
       <item>
         <title>First post</title>
-        <link>https://willemsleegers.github.io/posts/2017-05-25-first-post/</link>
+        <link>/posts/2017-05-25-first-post/</link>
         <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/2017-05-25-first-post/</guid>
+        <guid>/posts/2017-05-25-first-post/</guid>
         <description>&lt;p&gt;This is the first post of my new website, created with the amazing &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;. Blogdown uses &lt;a href=&#34;https://cran.r-project.org&#34;&gt;R&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; to create a website with blogging functionality. There are various themes to choose from, and this website uses a customized version of the &lt;a href=&#34;https://github.com/jnjosh/internet-weblog&#34;&gt;internet-weblog theme&lt;/a&gt;. If you&amp;rsquo;re interested in the code for this website, let me know!&lt;/p&gt;
 </description>
       </item>
