@@ -3,7 +3,7 @@
   <channel>
 
     <title>@willemsleegers’s website - Latex</title>
-    <link>https://willemsleegers.github.io/tags/latex/</link>
+    <link>/tags/latex/</link>
     <description>All entries in Latex on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,15 +14,15 @@
       
       <item>
         <title>My LaTeX dissertation template</title>
-        <link>https://willemsleegers.github.io/posts/my-latex-dissertation-template/</link>
+        <link>/posts/my-latex-dissertation-template/</link>
         <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>https://willemsleegers.github.io/posts/my-latex-dissertation-template/</guid>
+        <guid>/posts/my-latex-dissertation-template/</guid>
         <description>&lt;p&gt;I wrote my PhD dissertation in LaTeX, assuming it would be easier to use (in the long run!) compared to a standard text editor like Pages or Word. Pages does not support all of the functions needed for a beautiful dissertation (step up your game, Apple) and I dislike working in Word. Preferably, I would have written my dissertation in Markdown, but that also seems too limited for a dissertation. Hence, LaTeX.&lt;/p&gt;
 
 &lt;p&gt;In the end, I&amp;rsquo;m not sure whether it was worth it. I had to figure out a lot of things, which took me many hours, and the end result was just a whole mixup of packages of which I barely understood what they do. I did not have any experience working in LaTeX so I also took this as an opportunity to figure out whether I like it. My conclusion: I do not. There does not seem to be any kind of vision behind the structure underlying LaTeX, as seen in the need for a package for almost every single feature you would like to see in a text document. Unfortunately, it&amp;rsquo;s probably the only workable tool at the moment for a complex document like a dissertation.&lt;/p&gt;
 
-&lt;p&gt;Perhaps, then, having a suitable template might do the trick, so I present you with mine. You can find a PDF example of the template &lt;a href=&#34;https://willemsleegers.github.io/../../misc/dissertation_template.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Perhaps, then, having a suitable template might do the trick, so I present you with mine. You can find a PDF example of the template &lt;a href=&#34;/../../misc/dissertation_template.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;It has the following features:&lt;/p&gt;
 
@@ -34,7 +34,7 @@
 &lt;li&gt;Bibliography support with in-text references that link to the reference in the References section AND with page numbers in the References section to link back to the page where the reference was found&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;You can download the LaTeX template &lt;a href=&#34;https://willemsleegers.github.io/../../misc/dissertation_template.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can download the LaTeX template &lt;a href=&#34;/../../misc/dissertation_template.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
       </item>
       
