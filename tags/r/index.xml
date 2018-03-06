@@ -3,21 +3,39 @@
   <channel>
 
     <title>@willemsleegers’s website - R</title>
-    <link>/tags/r/</link>
+    <link>https://willemsleegers.github.io/tags/r/</link>
     <description>All entries in R on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Fri, 26 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/r/" rel="self" type="application/rss+xml" />
     
       
       <item>
-        <title>tidystats</title>
-        <link>/talks/labmeeting_26_01_2018/</link>
+        <title>Colloquium talk: tidystats</title>
+        <link>https://willemsleegers.github.io/talks/colloquium_mto_06_03_2018/</link>
+        <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+        <author> (Willem Sleegers)</author>
+        <guid>https://willemsleegers.github.io/talks/colloquium_mto_06_03_2018/</guid>
+        <description>&lt;div id=&#34;colloquium-talk-tidystats&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Colloquium talk: tidystats&lt;/h1&gt;
+&lt;p&gt;On March 6th, 2018, I gave a colloquium talk at the methodology department of Tilburg University. You can view the slides here:&lt;/p&gt;
+&lt;div id=&#34;view-slides&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;colloquium_06_03_2018.html&#34;&gt;View slides&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      </item>
+      
+    
+      
+      <item>
+        <title>Lab meeting talk: tidystats</title>
+        <link>https://willemsleegers.github.io/talks/labmeeting_26_01_2018/</link>
         <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/talks/labmeeting_26_01_2018/</guid>
+        <guid>https://willemsleegers.github.io/talks/labmeeting_26_01_2018/</guid>
         <description>&lt;div id=&#34;lab-meeting-talk-tidystats&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Lab meeting talk: tidystats&lt;/h1&gt;
 &lt;p&gt;On January 26th, 2018, I gave a lab meeting presentation on my R package called tidystats. You can see the slides here:&lt;/p&gt;
@@ -32,10 +50,10 @@
       
       <item>
         <title>Introducing tidystats</title>
-        <link>/posts/introducing-tidystats/</link>
+        <link>https://willemsleegers.github.io/posts/introducing-tidystats/</link>
         <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/posts/introducing-tidystats/</guid>
+        <guid>https://willemsleegers.github.io/posts/introducing-tidystats/</guid>
         <description>&lt;p&gt;I am very excited to announce my first ever R package, called &lt;code&gt;tidystats&lt;/code&gt;. Its function is to create a single text file containing the output of statistical models. This will enable researchers to store the results of their analyses not just in their manuscripts, but also in an organized file separate from their manuscript that they can freely share with anyone. In this blog post I will go into why I think it is useful to do this and how &lt;code&gt;tidystats&lt;/code&gt; works conceptually. For a tutorial I refer to the &lt;a href=&#34;https://github.com/WillemSleegers/tidystats&#34;&gt;README&lt;/a&gt; on Github and a future blog post.&lt;/p&gt;
 &lt;div id=&#34;pdf-prisons&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;PDF prisons&lt;/h3&gt;
@@ -123,10 +141,10 @@ summary(model)&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>Creating a trial-based time variable</title>
-        <link>/posts/creating-a-trial-based-time-variable/</link>
+        <link>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</link>
         <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/posts/creating-a-trial-based-time-variable/</guid>
+        <guid>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</guid>
         <description>&lt;p&gt;One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Example data&lt;/caption&gt;
@@ -310,10 +328,10 @@ data$time &amp;lt;- data$time / 1000&lt;/code&gt;&lt;/pre&gt;
       
       <item>
         <title>Importing multiple data files</title>
-        <link>/posts/importing-multiple-data-files/</link>
+        <link>https://willemsleegers.github.io/posts/importing-multiple-data-files/</link>
         <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
         <author> (Willem Sleegers)</author>
-        <guid>/posts/importing-multiple-data-files/</guid>
+        <guid>https://willemsleegers.github.io/posts/importing-multiple-data-files/</guid>
         <description>&lt;p&gt;Combining multiple data files is a regular problem for certain researchers, including myself. In my eye tracker research I collect data for each participant separately. This means that when I want to start preparing my data, I first need to combine the data into one large data frame.&lt;/p&gt;
 &lt;p&gt;There are many ways to combine separate data files in R. You can read in each file separately and store the result in their own data frame, after which you merge them together. Depending on the number of files, this might be feasible. In cases where you have many files, this is not. You can also create a &lt;code&gt;for&lt;/code&gt; loop to loop across all the files and merge the data of each file into one data frame. This is an attractive solution, but R is not really made for &lt;code&gt;for&lt;/code&gt; loops. Instead, functions such as &lt;code&gt;lapply()&lt;/code&gt; can be used.&lt;/p&gt;
 &lt;p&gt;But I recently discovered a better &lt;a href=&#34;https://github.com/STAT545-UBC/Discussion/issues/398&#34;&gt;way&lt;/a&gt; that also fits nicely in my preferred usage of R: the &lt;a href=&#34;http://tidyverse.org&#34;&gt;tidyverse&lt;/a&gt;. Using the &lt;code&gt;tidyverse&lt;/code&gt; package, you can read in multiple data files like this:&lt;/p&gt;

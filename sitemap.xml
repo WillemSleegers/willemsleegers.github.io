@@ -2,138 +2,143 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/talks/labmeeting_26_01_2018/</loc>
+    <loc>https://willemsleegers.github.io/talks/colloquium_mto_06_03_2018/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://willemsleegers.github.io/talks/labmeeting_26_01_2018/</loc>
     <lastmod>2018-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/my-latex-dissertation-template/</loc>
+    <loc>https://willemsleegers.github.io/posts/my-latex-dissertation-template/</loc>
     <lastmod>2017-12-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/introducing-tidystats/</loc>
+    <loc>https://willemsleegers.github.io/posts/introducing-tidystats/</loc>
     <lastmod>2017-10-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talks/tiber_2017/</loc>
+    <loc>https://willemsleegers.github.io/talks/tiber_2017/</loc>
     <lastmod>2017-08-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/creating-a-trial-based-time-variable/</loc>
+    <loc>https://willemsleegers.github.io/posts/creating-a-trial-based-time-variable/</loc>
     <lastmod>2017-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/importing-multiple-data-files/</loc>
+    <loc>https://willemsleegers.github.io/posts/importing-multiple-data-files/</loc>
     <lastmod>2017-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2017-05-25-first-post/</loc>
+    <loc>https://willemsleegers.github.io/posts/2017-05-25-first-post/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://willemsleegers.github.io/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/secret/</loc>
+    <loc>https://willemsleegers.github.io/secret/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://willemsleegers.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/cv/</loc>
+    <loc>https://willemsleegers.github.io/cv/</loc>
   </url>
   
   <url>
-    <loc>/tags/dissertation/</loc>
+    <loc>https://willemsleegers.github.io/tags/dissertation/</loc>
     <lastmod>2017-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/eye-tracking/</loc>
+    <loc>https://willemsleegers.github.io/tags/eye-tracking/</loc>
     <lastmod>2017-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/latex/</loc>
+    <loc>https://willemsleegers.github.io/tags/latex/</loc>
     <lastmod>2017-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/otree/</loc>
+    <loc>https://willemsleegers.github.io/tags/otree/</loc>
     <lastmod>2017-08-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/posts/</loc>
+    <loc>https://willemsleegers.github.io/posts/</loc>
     <lastmod>2017-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
+    <loc>https://willemsleegers.github.io/tags/r/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/series/</loc>
+    <loc>https://willemsleegers.github.io/series/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/statistics/</loc>
-    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
+    <loc>https://willemsleegers.github.io/tags/statistics/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://willemsleegers.github.io/tags/</loc>
     <lastmod>2017-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/talks/</loc>
-    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
+    <loc>https://willemsleegers.github.io/talks/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/tiber/</loc>
+    <loc>https://willemsleegers.github.io/tags/tiber/</loc>
     <lastmod>2017-08-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/tidystats/</loc>
-    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
+    <loc>https://willemsleegers.github.io/tags/tidystats/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/website/</loc>
+    <loc>https://willemsleegers.github.io/tags/website/</loc>
     <lastmod>2017-05-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
+    <loc>https://willemsleegers.github.io/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

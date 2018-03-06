@@ -3,7 +3,7 @@
   <channel>
 
     <title>@willemsleegers’s website - Tags</title>
-    <link>/tags/</link>
+    <link>https://willemsleegers.github.io/tags/</link>
     <description>All entries in Tags on website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
