@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dissertation on Willem Sleegers</title>
+    <link>/tags/dissertation/</link>
+    <description>Recent content in Dissertation on Willem Sleegers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/dissertation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My LaTeX dissertation template</title>
+      <link>/post/my-latex-dissertation-template/</link>
+      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/my-latex-dissertation-template/</guid>
+      <description>I wrote my PhD dissertation in LaTeX, assuming it would be easier to use (in the long run!) compared to a standard text editor like Pages or Word. Pages does not support all of the functions needed for a beautiful dissertation (step up your game, Apple) and I dislike working in Word. Preferably, I would have written my dissertation in Markdown, but that also seems too limited for a dissertation. Hence, LaTeX.</description>
+    </item>
+    
+  </channel>
+</rss>

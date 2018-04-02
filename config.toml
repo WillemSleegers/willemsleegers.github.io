@@ -1,0 +1,75 @@
+baseURL = "https://modest-varahamihira-34a0a4.netlify.com"
+languageCode = "en-us"
+title = "Willem Sleegers"
+theme = "minimal"
+# disqusShortname = "username" # delete this to disable disqus comments
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+googleAnalytics = ""
+
+[params]
+    author = "Willem Sleegers"
+    # profilePic = "img/profile.png"
+    description = "My personal website"
+    githubUsername = "#"
+    accent = "steelblue"
+    showBorder = true
+    backgroundColor = "white"
+    font = "FontAwesome"
+    highlight = true
+    highlightStyle = "solarized-dark"
+    highlightLanguages = ["r"]
+    css = ["css/my_style.css"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/project/"
+    name = "Projects"
+    weight = 3
+
+[[menu.main]]
+    url = "/publications/"
+    name = "Publications"
+    weight = 4
+
+[[menu.main]]
+    url = "/talk/"
+    name = "Talks"
+    weight = 5
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "mailto:w.sleegers@me.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/willemsleegers/"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/willemsleegers/"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/willem-sleegers-262a0350/"
+    name = "linkedin"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://stackoverflow.com/users/1024363/willem-sleegers/"
+    name = "stack-overflow"
+    weight = 5

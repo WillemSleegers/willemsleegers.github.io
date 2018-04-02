@@ -1,0 +1,15 @@
+---
+title: "Colloquium talk: tidystats"
+author: "Willem Sleegers"
+date: '2018-03-06'
+tags:
+  - tidystats
+  - R
+  - statistics
+---
+
+# Colloquium talk: tidystats
+
+On March 6th, 2018, I gave a colloquium talk at the methodology department of Tilburg University. You can view the slides here:
+
+### [View slides](colloquium_06_03_2018.html)

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Creating a trial-based time variable</title>
+        
+        <style>
+
+    html body {
+        font-family: 'FontAwesome', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: steelblue;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+ <link rel="stylesheet" href="/css/my_style.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FontAwesome">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.37.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Creating a trial-based time variable</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                                <li><a href="/publications/">Publications</a></li>
+                            
+                                <li><a href="/talk/">Talks</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:w.sleegers@me.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/willemsleegers/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/willemsleegers/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/willem-sleegers-262a0350/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/1024363/willem-sleegers/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/creating-a-trial-based-time-variable/">Creating a trial-based time variable</a></h4>
+    <h5>July 19, 2017</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/eye-tracking"><kbd class="item-tag">eye tracking</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:</p>
+<pre><code>## # A tibble: 10 x 4
+##    subject timestamp trial pupil
+##      &lt;int&gt;     &lt;int&gt; &lt;int&gt; &lt;dbl&gt;
+##  1       1 212275472     1  3.73
+##  2       1 212292222     1  3.74
+##  3       1 212308845     1  3.74
+##  4       1 212325470     1  3.76
+##  5       1 212342094     1  3.75
+##  6       1 212358844     2  3.76
+##  7       1 212375469     2  3.77
+##  8       1 212392094     2  3.76
+##  9       1 212408718     2  3.77
+## 10       1 212425344     2  3.76</code></pre>
+<p>The <code>timestamp</code> variable actually reflects the internal clock of the hardware used to get the data. This means that each measurement recording has a specific clock time associated with it, rather than a time stamp related to an event in the experiment.</p>
+<p>Fortunately, it’s relatively easy to turn this variable into a more useful variable. What we want is a variable, say <code>time</code>, that starts at 0 when a trial begins. The subsequent measures, in the same trial, should then be timed relative to the start of the trial. We want this for every trial.</p>
+<p>The required steps to get this variable are as follows:</p>
+<ol style="list-style-type: decimal">
+<li>For each trial, get the minimum of the <code>timestamp</code> variable (e.g., 212275472 in trial 1)</li>
+<li>Repeat this value across the entire trial</li>
+<li>Subtract this value from the <code>timestamp</code> variable</li>
+</ol>
+<p>In R, this would look like this:</p>
+<pre class="r"><code>data %&gt;%
+    group_by(subject, trial) %&gt;%
+    mutate(time = timestamp - min(timestamp)) -&gt; data
+
+data$time &lt;- data$time / 1000</code></pre>
+<p>We take our data frame, group the data by <code>subject</code> and <code>trial</code> (because we want the minimum for each individual trial), and create a new variable called <code>time</code> that is equal to the value in <code>timestamp</code> minus the minimum of the timestamp for that trial. Additionally, we divide the result by a 1000 because the internal clock is in microseconds, and I prefer milliseconds. The result is this:</p>
+<pre><code>## # A tibble: 10 x 5
+## # Groups:   subject, trial [2]
+##    subject timestamp trial pupil  time
+##      &lt;int&gt;     &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1       1 212275472     1  3.73   0. 
+##  2       1 212292222     1  3.74  16.8
+##  3       1 212308845     1  3.74  33.4
+##  4       1 212325470     1  3.76  50.0
+##  5       1 212342094     1  3.75  66.6
+##  6       1 212358844     2  3.76   0. 
+##  7       1 212375469     2  3.77  16.6
+##  8       1 212392094     2  3.76  33.2
+##  9       1 212408718     2  3.77  49.9
+## 10       1 212425344     2  3.76  66.5</code></pre>
+<p>We see that our new variable time indeed starts at 0, adds up until the next trial, where it starts at 0 again. Excellent!</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/introducing-tidystats/">Introducing tidystats</a></h4>
+    <h5>October 14, 2017</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/tidystats"><kbd class="item-tag">tidystats</kbd></a>
+    
+    <a href="/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/importing-multiple-data-files/">Importing multiple data files</a></h4>
+    <h5>June 2, 2017</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/eye-tracking"><kbd class="item-tag">eye tracking</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

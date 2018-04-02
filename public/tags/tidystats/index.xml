@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tidystats on Willem Sleegers</title>
+    <link>/tags/tidystats/</link>
+    <description>Recent content in Tidystats on Willem Sleegers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tidystats/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Colloquium talk: tidystats</title>
+      <link>/talk/colloquium_06_03_2018/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/colloquium_06_03_2018/</guid>
+      <description>Colloquium talk: tidystats On March 6th, 2018, I gave a colloquium talk at the methodology department of Tilburg University. You can view the slides here:
+View slides   </description>
+    </item>
+    
+    <item>
+      <title>Lab meeting talk: tidystats</title>
+      <link>/talk/labmeeting_26_01_2018/</link>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/labmeeting_26_01_2018/</guid>
+      <description>Lab meeting talk: tidystats On January 26th, 2018, I gave a lab meeting presentation on my R package called tidystats. You can see the slides here:
+View slides   </description>
+    </item>
+    
+    <item>
+      <title>Introducing tidystats</title>
+      <link>/post/introducing-tidystats/</link>
+      <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/introducing-tidystats/</guid>
+      <description>I am very excited to announce my first ever R package, called tidystats. Its function is to create a single text file containing the output of statistical models. This will enable researchers to store the results of their analyses not just in their manuscripts, but also in an organized file separate from their manuscript that they can freely share with anyone. In this blog post I will go into why I think it is useful to do this and how tidystats works conceptually.</description>
+    </item>
+    
+  </channel>
+</rss>

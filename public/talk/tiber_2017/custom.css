@@ -1,0 +1,33 @@
+slides > slide.backdrop {
+  background: white;
+}
+
+.title_centered {
+  text-align: center;
+  margin-top: 3em;
+  font-size: 3em;
+  color: #515151;
+  font-weight: bold;
+}
+
+.picture_right img {
+    padding-left: 2em;
+}
+
+.picture_center img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.quote {
+	vertical-align: middle;
+}
+
+.references {
+    font-size: 0.6em;
+}
+
+.cite {
+	font-size: 0.75em;
+}

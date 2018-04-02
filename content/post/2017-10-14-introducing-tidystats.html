@@ -1,0 +1,94 @@
+---
+title: Introducing tidystats
+author: ~
+date: '2017-10-14'
+slug: introducing-tidystats
+categories: []
+tags:
+  - R
+  - tidystats
+  - statistics
+---
+
+
+
+<p>I am very excited to announce my first ever R package, called <code>tidystats</code>. Its function is to create a single text file containing the output of statistical models. This will enable researchers to store the results of their analyses not just in their manuscripts, but also in an organized file separate from their manuscript that they can freely share with anyone. In this blog post I will go into why I think it is useful to do this and how <code>tidystats</code> works conceptually. For a tutorial I refer to the <a href="https://github.com/WillemSleegers/tidystats">README</a> on Github and a future blog post.</p>
+<div id="pdf-prisons" class="section level3">
+<h3>PDF prisons</h3>
+<p>The standard workflow of an academic researcher is to form hypotheses based on theory, collect data, analyse the results, and present these results in a manuscript. These results are very important. Not only are they used to test hypotheses, but they can also be used to check whether mistakes were made and to conduct meta-analyses. Checking for mistakes and summarizing results, as done with meta-analytic techniques, is vital for good science. We therefore want the data to be easily accessible. Unfortunately, this is often not the case. The output of statistical analyses is usually only found in the PDF file that is the researcher’s manuscript.</p>
+<p>Extracting data from PDFs using software is a possible solution, although it remains challenging. This is partly due to the file format itself. Sometimes a PDF is nothing but an image file, making it very difficult to extract text. In most cases, though, it’s because researchers flexibly report the results of their analyses (and rightly so). There are specific style guides (e.g., <a href="http://www.apastyle.org">APA</a>) that determine how the output of certain analyses should be reported, but this is not sufficiently structured to make parsing PDF files easy. For example, a researcher may decide to report the results in the text, in a table, or in a graph. Or perhaps the researcher summarizes the results (e.g., all <em>Fs</em> &lt; 1), even though the separate results would be useful to the reader. This makes it either difficult, time-consuming, or impossible to get the required statistics.</p>
+<p>Thankfully, the difficulty of extracting text from PDFs hasn’t stopped some people from developing software tools to do this. For example, <a href="http://statcheck.io">statcheck</a> is an R package to extract statistics from a PDF to see whether the results are consistent. In other words, it is a statistics spellchecker that can prevent the researcher from reporting incorrect statistics caused by mistyping or copy-paste errors (easy mistakes to make while writing up the results). There is also the <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package to extract results from tables in PDFs and there’s <a href="https://arxiv.org/abs/1709.02261">software</a> to extract data from figures. However, each of these are not foolproof and require manual checking to see whether everything performed well.</p>
+<p>Another potential solution is to re-run the analyses yourself. Researchers are increasingly motivated to share the data and the scripts that were used to prepare and analyze the data. However, even though this is a great development, it is incredibly time-intensive to download other researcher’s data (which may be very large) and execute their scripts (which may not always be very well organized). Instead, I believe it is more fruitful for researchers to add an extra step in between their data analysis and manuscript preparation.</p>
+<p>I believe researchers should take all of the output of their statistical tests and put them together in a single data file. This data file should be organized so that data can easily be parsed.</p>
+<p>This is where <code>tidystats</code> comes in.</p>
+</div>
+<div id="tidystats" class="section level3">
+<h3>Tidystats</h3>
+<p><code>tidystats</code> is an R package that enables researchers to create a data file containing the output of statistical analyses. The basic workflow is quite simple. At the start of the data analysis script, an empty list is made that can store the output of statistical tests. Then, whenever a test is run, the output of the test can be added to the list. Once the data analysis stage is complete (and writing up the results begins), the list can be converted to a data frame and saved to a file.</p>
+<p>Organizing the output of statistical tests is not an easy feat because different analyses have different kinds of output. In other words, the collection of statistics resulting from different kinds of analyses is messy. A solution to messy data is to make it <a href="http://vita.had.co.nz/papers/tidy-data.html">tidy</a>. Tidy data sets are easy to manipulate, model, and visualize because they have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table. In the context of statistical analyses, relevant variables (e.g., type of analysis, the statistic, the value of the statistic) are columns, each relevant statistic (e.g., a <em>p</em>-value of .054) is a row, and the statistical analysis is a table.</p>
+<p>To illustrate this, let’s conduct a typical regression analysis:</p>
+<pre class="r"><code># Run the regression
+model &lt;- lm(DV ~ condition, data = data)
+
+# Inspect the output
+summary(model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = DV ~ condition, data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.0710 -0.4938  0.0685  0.2462  1.3690 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)          5.0320     0.2202  22.850 9.55e-15 ***
+## conditiontreatment  -0.3710     0.3114  -1.191    0.249    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.6964 on 18 degrees of freedom
+## Multiple R-squared:  0.07308,    Adjusted R-squared:  0.02158 
+## F-statistic: 1.419 on 1 and 18 DF,  p-value: 0.249</code></pre>
+<p>The output shows multiple statistics we would like to store. To get these we need to first extract them from the output of <code>summary(model)</code> and then organize them. Inspired by the <a href="https://github.com/tidyverse/broom"><code>broom</code></a> package, <code>tidystats</code> contains functions to help tidy the output of these models. This consists of extracting the relevant statistics and put them in a format consistent with tidy data principles.</p>
+<p>Applying this to the <code>model</code> variable, we get:</p>
+<pre class="r"><code>tidystats::tidy_stats(model)</code></pre>
+<pre><code>## # A tibble: 16 x 5
+##    term_nr term               statistic              value method         
+##      &lt;dbl&gt; &lt;chr&gt;              &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;          
+##  1      1. (Intercept)        b                   5.03e+ 0 Linear regress…
+##  2      1. (Intercept)        SE                  2.20e- 1 Linear regress…
+##  3      1. (Intercept)        t                   2.29e+ 1 Linear regress…
+##  4      1. (Intercept)        p                   9.55e-15 Linear regress…
+##  5      1. (Intercept)        df                  1.80e+ 1 Linear regress…
+##  6      2. conditiontreatment b                  -3.71e- 1 Linear regress…
+##  7      2. conditiontreatment SE                  3.11e- 1 Linear regress…
+##  8      2. conditiontreatment t                  -1.19e+ 0 Linear regress…
+##  9      2. conditiontreatment p                   2.49e- 1 Linear regress…
+## 10      2. conditiontreatment df                  1.80e+ 1 Linear regress…
+## 11      3. (Model)            R squared           7.31e- 2 Linear regress…
+## 12      3. (Model)            adjusted R squared  2.16e- 2 Linear regress…
+## 13      3. (Model)            F                   1.42e+ 0 Linear regress…
+## 14      3. (Model)            numerator df        1.00e+ 0 Linear regress…
+## 15      3. (Model)            denominator df      1.80e+ 1 Linear regress…
+## 16      3. (Model)            p                   2.49e- 1 Linear regress…</code></pre>
+<p>Here we see that the output is now organized in such a way that each column is a relevant variable, each row is a statistic, and the entire output is a table containing important statistics of the regression analysis. This allows us to then combine the output of <em>multiple</em> statistical tests.</p>
+<p>However, before adding multiple results together, it might be useful to add additional information.</p>
+</div>
+<div id="adding-researcher-information" class="section level3">
+<h3>Adding researcher information</h3>
+<p>Besides organizing the output of statistical tests, I also think researchers can add valuable information to specific tests. For example, when you want to perform a meta-analysis such as a p-curve analysis, you should not add all of the statistical results that you can find in the manuscript. Instead, only the results that belong to the effect of interest are relevant. Additional tests such as manipulation checks are not. It is easy to select statistics that do not belong to the effect of interest, as can be seen in this Data Colada <a href="http://datacolada.org/60">post</a>.</p>
+<p>Something that may help make this easier is for the original authors to indicate what they consider to be the crucial tests.</p>
+<p>Additionally, it may be fruitful for researchers to also indicate which analyses were confirmatory and which were exploratory. For example, there is currently a debate about whether the alpha of .05 should be lowered to .005, see <a href="https://psyarxiv.com/mky9j/">here</a>, <a href="https://psyarxiv.com/9s3y6">here</a>, and <a href="https://arxiv.org/abs/1709.07588">here</a>. Yet, the ‘correct’ alpha depends in part on whether an analysis is confirmatory or exploratory, so it may be fruitful for researchers to indicate whether the analysis was part of the pre-registration or not.</p>
+<p>To this end, <code>tidystats</code> uses the <code>add_stats()</code> function. This function tidies the output of a statistical test (as shown before) and allows researchers to add additional information, such as what type of test it is (e.g., hypothesis test, manipulation test) and whether the analysis is confirmatory or exploratory.</p>
+</div>
+<div id="additional-benefits" class="section level3">
+<h3>Additional benefits</h3>
+<p>I am making the case for researchers to add an additional step their workflow: to create an organized file containing the statistical output of the tests, together with additional researcher-supplied information. I realize that arguing for already-way-too-busy researchers to do extra work is not a particularly winning strategy. Of course I hope that my prior arguments are convincing in that this extra step will greatly boost the ease with which we can perform meta-analytic research, but if you are not interested in doing meta-analytic research, these arguments may be less persuasive. Thankfully, there are additional benefits to creating an organized data file.</p>
+<p>If you have an organized data file of statistical output, you can use this file to easily report the output in your manuscript. Using <a href="http://rmarkdown.rstudio.com">R Markdown</a> it is possible to combine code together with text in order to write a results section. Some packages already exist to make this possible (e.g., <a href="https://github.com/crsh/papaja">papaja</a>). Having an organized data file of statistics makes reporting the output of a statistical analysis as easy as saying ‘report results of analysis X’. In fact, <code>tidystats()</code> currently supports exactly this for t-tests, correlations, regression, and ANOVAs. You can check out the <a href="https://github.com/WillemSleegers/tidystats">README</a> to see some examples of how this works. This not only makes it easy to report statistics, it also prevents mistakes due to typos and copy-paste errors, which are surprisingly common (see for example <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101263/">here</a>).</p>
+<p>So, organizing a data file of statistics output is not just beneficial for conducting meta-research, it is also beneficial for individual researchers working on their manuscript.</p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
+<p>In this blog post I have tried to make the case for an extra step in the researcher’s workflow, and how <code>tidystats</code> can be used to achieve this. My main goal is to convince you of the benefits of the former, and not necessarily of the benefits of the latter. I simply believe it is useful for researchers to organize the output of their statistical tests, rather than put them in PDF prisons. You do not need <code>tidystats</code> to do this. You could even create your own technique for doing so. Nevertheless, I hope that <code>tidystats</code> adds some value for researchers who often have to analyze data and share their results. I will continue to work on <code>tidystats</code> to add support for even more statistical functions and even more reporting functions. If you want to help contribute to the package, you can do so <a href="https://github.com/WillemSleegers/tidystats">here</a>. I also appreciate any feedback, so feel free to share your thoughts.</p>
+</div>

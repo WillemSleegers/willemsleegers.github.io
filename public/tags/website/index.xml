@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on Willem Sleegers</title>
+    <link>/tags/website/</link>
+    <description>Recent content in Website on Willem Sleegers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First post</title>
+      <link>/post/2017-05-25-first-post/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-05-25-first-post/</guid>
+      <description>This is the first post of my new website, created with the amazing blogdown. Blogdown uses R and Hugo to create a website with blogging functionality. There are various themes to choose from, and this website uses a customized version of the internet-weblog theme. If you&amp;rsquo;re interested in the code for this website, let me know!
+EDIT: I have since changed the theme to the Minimal theme.</description>
+    </item>
+    
+  </channel>
+</rss>

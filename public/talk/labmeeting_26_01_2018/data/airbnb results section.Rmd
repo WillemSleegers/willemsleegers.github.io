@@ -1,0 +1,50 @@
+---
+title: "The effects of facial attractiveness and trustworthiness in the sharing economy"
+author: "Willem Sleegers"
+date: "1/3/2018"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(knitr.kable.NA = '-')
+
+# Setup
+library(tidyverse)
+library(tidystats)
+library(knitr)
+
+# Load data
+data <- read_csv("../Data/prepared data.csv")
+
+# Setup factors
+data$host_gender <- factor(data$host_gender, labels = c("female", "male"))
+data$entire_apartment <- factor(data$entire_apartment)
+data$facepp_gender <- factor(data$facepp_gender, labels = c("female", "male"))
+data$facepp_ethnicity <- fct_relevel(data$facepp_ethnicity, 'White', 'Black', 'Asian')
+data$host_is_superhost <- factor(as.numeric(if_else(data$host_is_superhost == "f", 0, 1)))
+
+# Load results
+results <- read_stats("../Data/results.csv")
+
+# Options
+options(tidystats_list = results, options = 99999)
+```
+
+## Results
+
+### Confirmatory analyses
+
+In accordance with our pre-registration, we conducted multiple regression analyses to predict price based on host trustworthiness and attractiveness, while controlling for various related features of the listing. As can be seen in Table 1, we did not find an effect of host trustworthiness `r report("M1", term = "trustworthiness_median_z")`, thereby failing to replicate the findings by Ert et al. (2016). Additionally, and also inconsistent with the findings of Ert et al. (2016), we did find a significant effect of host attractiveness, `r report("M2", term = "attractiveness_median_z")`, see Table 2. The attractiveness of the host was found to be positively related to the asking price of the Airbnb listing. These effects remained when controlling for either host attractiveness and trustworthiness, respectively. 
+
+We subsequently investigated potential interaction effects. There was no significant interaction between host attractiveness and trustworthiness, `r report("M4", term = "trustworthiness_median_z:attractiveness_median_z")`. While controlling for attractiveness, no interactions were found between host trustworthiness and gender, `r report("M5", term = "trustworthiness_median_z:host_gendermale")`, nor between host trustworthiness and whether the entire apartment was offered, `r report("M7", term = "trustworthiness_median_z:entire_apartment1")`. Similarly, while controlling for trustworthiness, no  interactions were found between host attractiveness and gender, `r report("M6", term = "attractiveness_median_z:host_gendermale")`, nor between host attractiveness and whether the entire apartment was offered, `r report("M8", term = "attractiveness_median_z:entire_apartment1")`.
+
+We repeated these analyses with the mean ratings of host trustworthiness and attractiveness, as opposed to the median ratings, but no differences were found.
+
+### Exploratory analyses
+
+**Beauty premium vs. ugliness penalty.** Since we found an effect of attractiveness, we tested whether this effect indicates a beauty premium (i.e., more attractive hosts can charge higher prices than hosts of average attractiveness) or a ugliness penality (i.e., less attractive hosts charge less than hosts of average attractiveness), or both. To this end, we categorized the host attractiveness ratings into three groups: one standard deviation below the average, above the average, or in between. This revealed an ugliness penalty. Hosts who were rated as less attractive, compared to the average attractiveness, were associated with a lower asking price, `r report("M9", term = "attractiveness_catlow")`, while there was no effect of attractive hosts, `r report("M9", term = "attractiveness_cathigh")`.
+
+**The influence of ethnicity, age, and facial expression.** We also extended our analysis by including host demographics acquired through the Face Plus Plus API, which detected the ethnicity, age, and smile intensity of the host's profile photo. Ethnicity consisted of either a White (N = 751), Black (N = 127), or Asian (N = 139) categorisation. Three photos could not be classified. Using White as the reference category, we found no effect of Asian ethnicity, `r report("M10", term = "facepp_ethnicityAsian")`, but we did find a negative effect of Black ethnicity, `r report("M10", term = "facepp_ethnicityBlack")`. Hosts of a Black ethnicity were associated with a lower asking price compared to those with a White ethnicity. The estimated age of the host was not associated with price, `r report("M10", term = "facepp_age_z")`, but the smile intensity of the host was, `r report("M10", term = "facepp_smile_z")`. Hosts with a higher smile intensity were associated with a higher asking price. 

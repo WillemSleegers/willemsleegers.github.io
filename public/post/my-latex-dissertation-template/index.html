@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My LaTeX dissertation template</title>
+        
+        <style>
+
+    html body {
+        font-family: 'FontAwesome', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: steelblue;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+ <link rel="stylesheet" href="/css/my_style.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FontAwesome">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.37.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">My LaTeX dissertation template</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                                <li><a href="/publications/">Publications</a></li>
+                            
+                                <li><a href="/talk/">Talks</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:w.sleegers@me.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/willemsleegers/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/willemsleegers/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/willem-sleegers-262a0350/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/1024363/willem-sleegers/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/my-latex-dissertation-template/">My LaTeX dissertation template</a></h4>
+    <h5>December 23, 2017</h5>
+    
+    <a href="/tags/latex"><kbd class="item-tag">LaTeX</kbd></a>
+    
+    <a href="/tags/dissertation"><kbd class="item-tag">dissertation</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>I wrote my PhD dissertation in LaTeX, assuming it would be easier to use (in the long run!) compared to a standard text editor like Pages or Word. Pages does not support all of the functions needed for a beautiful dissertation (step up your game, Apple) and I dislike working in Word. Preferably, I would have written my dissertation in Markdown, but that also seems too limited for a dissertation. Hence, LaTeX.</p>
+
+<p>In the end, I&rsquo;m not sure whether it was worth it. I had to figure out a lot of things, which took me many hours, and the end result was just a whole mixup of packages of which I barely understood what they do. I did not have any experience working in LaTeX so I also took this as an opportunity to figure out whether I like it. My conclusion: I do not. There does not seem to be any kind of vision behind the structure underlying LaTeX, as seen in the need for a package for almost every single feature you would like to see in a text document. Unfortunately, it&rsquo;s probably the only workable tool at the moment for a complex document like a dissertation.</p>
+
+<p>Perhaps, then, having a suitable template might do the trick, so I present you with mine. You can find a PDF example of the template <a href="/../../misc/dissertation_template.pdf">here</a>.</p>
+
+<p>It has the following features:</p>
+
+<ul>
+<li>Standard pages for a dissertation (e.g., supervisor/assessment committee page)</li>
+<li>Table of contents</li>
+<li>Two page structure with footers and headers (see example)</li>
+<li>Figures</li>
+<li>Bibliography support with in-text references that link to the reference in the References section AND with page numbers in the References section to link back to the page where the reference was found</li>
+</ul>
+
+<p>You can download the LaTeX template <a href="/../../misc/dissertation_template.zip">here</a>.</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

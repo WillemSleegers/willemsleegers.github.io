@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eye Tracking on Willem Sleegers</title>
+    <link>/tags/eye-tracking/</link>
+    <description>Recent content in Eye Tracking on Willem Sleegers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/eye-tracking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a trial-based time variable</title>
+      <link>/post/creating-a-trial-based-time-variable/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/creating-a-trial-based-time-variable/</guid>
+      <description>One of the first issues I ran into when starting to analyze eye tracker data was that the raw data does not contain a trial-based time variable. I expected that the timestamp variable would be a variable that starts at 0 when a trial begins and that it would keep adding up at a rate equal to the sampling frequency, until the end of the trial. Instead, you are likely to get a timestamp variable that looks like a random set of numbers, as shown here:</description>
+    </item>
+    
+    <item>
+      <title>Importing multiple data files</title>
+      <link>/post/importing-multiple-data-files/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/importing-multiple-data-files/</guid>
+      <description>Combining multiple data files is a regular problem for certain researchers, including myself. In my eye tracker research I collect data for each participant separately. This means that when I want to start preparing my data, I first need to combine the data into one large data frame.
+There are many ways to combine separate data files in R. You can read in each file separately and store the result in their own data frame, after which you merge them together.</description>
+    </item>
+    
+  </channel>
+</rss>

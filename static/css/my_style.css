@@ -1,0 +1,39 @@
+html body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "FontAwesome", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Home */
+
+.intro {
+    transform: translateY(15vh);
+}
+
+.intro > h1 {
+  font-size: 5.9vw;
+}
+
+.intro > h2 {
+  font-size: 3.0vh;
+}
+
+/* Tags */
+
+.item-tag {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "FontAwesome", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  
+  background: #eee;
+  box-shadow: none;
+  border-radius: 3px;
+  color: gray;
+  text-decoration: none;
+  padding: 3px 6px 3px 6px;
+}
+
+.item {
+  width: 50vw;
+  text-align: left;
+}

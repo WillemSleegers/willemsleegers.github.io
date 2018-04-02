@@ -1,0 +1,20 @@
+---
+title: Importing multiple data files
+author: ~
+date: '2017-06-02'
+slug: importing-multiple-data-files
+tags:
+  - R
+  - eye tracking
+---
+
+
+
+<p>Combining multiple data files is a regular problem for certain researchers, including myself. In my eye tracker research I collect data for each participant separately. This means that when I want to start preparing my data, I first need to combine the data into one large data frame.</p>
+<p>There are many ways to combine separate data files in R. You can read in each file separately and store the result in their own data frame, after which you merge them together. Depending on the number of files, this might be feasible. In cases where you have many files, this is not. You can also create a <code>for</code> loop to loop across all the files and merge the data of each file into one data frame. This is an attractive solution, but R is not really made for <code>for</code> loops. Instead, functions such as <code>lapply()</code> can be used.</p>
+<p>But I recently discovered a better <a href="https://github.com/STAT545-UBC/Discussion/issues/398">way</a> that also fits nicely in my preferred usage of R: the <a href="http://tidyverse.org">tidyverse</a>. Using the <code>tidyverse</code> package, you can read in multiple data files like this:</p>
+<pre class="r"><code>data &lt;- list.files() %&gt;%
+    map_df(read_tsv)</code></pre>
+<p><code>list.files()</code> returns a vector containing the file names of the files in your current working directory. This vector is piped into <code>map_df()</code> with the pipe operator, <code>%&gt;%</code>. <code>map_df()</code> loops over each of these files, reads in the data with the supplied function (in this case <code>read_tsv()</code>), and automatically combines the results into one data frame, which I store in a variable called <code>data</code>.</p>
+<p>This code works if you are already in the correct working directory. If you do not want to set the working directory, you can add the <code>path</code> argument to <code>list.files()</code> and also set <code>full.names</code> to <strong>TRUE</strong>. This latter argument will make <code>list.files()</code> return the paths to the files you want to read in, rather than just the file names, which is needed for the function to import the data into R.</p>
+<p>This is my new favorite way of reading in multiple data files.</p>

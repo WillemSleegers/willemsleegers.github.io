@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Otree on Willem Sleegers</title>
+    <link>/tags/otree/</link>
+    <description>Recent content in Otree on Willem Sleegers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/otree/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TIBER 2017: oTree for social scientists</title>
+      <link>/talk/tiber_2017/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/tiber_2017/</guid>
+      <description>TIBER 2017 talk At TIBER 2017 I gave a talk about oTree, an open-source platform for conducting web, field, and lab experiments. Below you can find a link to this talk, as well as something resembling a transcript of the talk (I like writing out what I’m going to say for a talk).
+My talk was mostly a demonstration of oTree, so it contains links to oTree experiments. Unfortunately I cannot promise that these links will always remain active, so check it out while you can!</description>
+    </item>
+    
+  </channel>
+</rss>

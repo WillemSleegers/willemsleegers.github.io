@@ -1,0 +1,15 @@
+---
+title: "Lab meeting talk: tidystats"
+author: "Willem Sleegers"
+date: '2018-01-26'
+tags:
+  - tidystats
+  - R
+  - statistics
+---
+
+# Lab meeting talk: tidystats
+
+On January 26th, 2018, I gave a lab meeting presentation on my R package called tidystats. You can see the slides here:
+
+### [View slides](labmeeting_26_01_2018.html)

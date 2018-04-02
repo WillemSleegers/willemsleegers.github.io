@@ -10,7 +10,7 @@ options(servr.daemon = TRUE)
 # Inspect website ----------------------------------------------------------
 
 # Build website
-# build_site()
+build_site()
 
 # Serve website
 serve_site()
